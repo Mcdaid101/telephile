@@ -5,8 +5,22 @@ from cloudinary.models import CloudinaryField
 STATUS = ((0, "Draft"), (1, "Published"))
 
 
+class Category(models.Model):
+    MY_CHOICES = (
+        ('Drama', 'Drama'),
+        ('Sci-Fi', 'Sci-Fi'),
+        ('Fantasy', 'Fantasy'),
+        ('Comedy', 'Comedy'),
+        ('Documentary', 'Documentary')
+    )
+    category = models.CharField(max_length=50, null=False, choices=MY_CHOICES, default="Drama")
+
+    def __str__(self):
+        return self.category
+
+
 class Post(models.Model):
-    series = models.CharField(max_length=200, unique=True)
+    title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='blog_posts')
     content = models.TextField()
@@ -14,17 +28,13 @@ class Post(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(User, related_name='blog_likes', blank=True)
-    MY_CHOICES = (
-        ('A', 'Choice A'),
-        ('B', 'Choice B'),
-    )
-    category = models.CharField(max_length=50, null=False, choices=MY_CHOICES, default="Choice A")
-    
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, default="Drama")
+
     class Meta:
         ordering = ['-created_on']
 
     def __str__(self):
-        return self.series
+        return self.title
 
     def number_of_likes(self):
         return self.likes.count()
