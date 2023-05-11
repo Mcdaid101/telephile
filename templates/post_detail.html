@@ -1,5 +1,7 @@
 {% extends 'base.html' %} {% block content %}
 
+{% load crispy_forms_tags %}
+
 <div id="post-detail-view" class="container">
    <!--Title-->
    <div id="title" class="col-12 d-flex justify-content-center">
@@ -25,7 +27,17 @@
     {{ post.content | safe }}</p>
    </div>
    <!--Comments-->
-   <div id="comments" class="col-12">{{ post.comments }}</div>
+   <div id="comments">
+      {% if user.is_authenticated %}
+      <h5>Leave a comment:</h5>
+      <p>{{ user.username }}</p>
+      <form method="post">
+         {{ comment_form | crispy }}
+         {% csrf_token %}
+         <button type="submit" class="btn btn-lg">Submit</button>
+      </form>
+      {% endif %}
+   </div>
 </div>
 
 {% endblock content %}
