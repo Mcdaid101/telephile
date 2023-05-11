@@ -1,7 +1,9 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
+from django.http import HttpResponseRedirect
 from .models import Post
 from .forms import CommentForm
+from django.urls import reverse
 
 
 class PostList(generic.ListView):
@@ -27,7 +29,7 @@ class PostDetail(View):
             {
                 "post": post,
                 "comments": comments,
-                 "commented": False,
+                "commented": False,
                 "liked": liked,
                 "comment_form": CommentForm()
             },
@@ -64,3 +66,15 @@ class PostDetail(View):
                 "comment_form": CommentForm()
             },
         )
+
+
+class PostLike(View):
+    
+    def post(self, request, slug, *args, **kwargs):
+        post = get_object_or_404(Post, slug=slug)
+        if post.likes.filter(id=request.user.id).exists():
+            post.likes.remove(request.user)
+        else:
+            post.likes.add(request.user)
+
+        return HttpResponseRedirect(reverse('post_detail', args=[slug]))

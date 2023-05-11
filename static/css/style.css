@@ -1,9 +1,19 @@
 body {
-  background-color: whitesmoke;
+  background-color: black;
+  color: white;
 }
 .nav-item {
   color: white;
 }
+
+.navbar-light .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 0, 0, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-light .navbar-toggler {
+  border: 1px solid red;
+}
+
 #footer {
   margin-top: 30px;
   position: fixed;
@@ -14,10 +24,10 @@ body {
 #post-detail-view {
   margin: auto;
   max-width: 50%;
+  margin-bottom: 200px;
 }
 
 #image-bottom {
-  background-color: whitesmoke;
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -47,7 +57,7 @@ body {
 
 #comments-section {
   margin-top: 30px;
-  margin-bottom: 100px;
+  margin-bottom: 150px;
 }
 
 #comment-submit {
@@ -62,6 +72,12 @@ body {
   margin-top: 50px;
 }
 
+.btn-like:hover,
+.btn-like:active {
+    color: #E84610;
+    background: transparent;
+    border: none;
+}
 
 @media screen and (max-width: 800px){
   #post-detail-view {
