@@ -27,15 +27,38 @@
     {{ post.content | safe }}</p>
    </div>
    <!--Comments-->
-   <div id="comments">
+   <div id="comment-section">
+      <div class="card">
+         <div class="card-header">
+           <h3>Comments Section</h3>
+         </div>
+         {% for comment in comments %}
+         <div class="card-header">
+            <cite>{{ comment.name }} , {{ comment.created_on }}</cite>
+         <div class="card-body">
+            <blockquote class="blockquote">
+             <p>{{ comment.body | linebreaks }}</p>
+            </blockquote>
+         </div>
+      </div>
+         {% endfor %}
+       </div>
+      {% if commented %}
+      <div id="comment-success" class="alert alert-success" role="alert">
+         Your comment is awaiting approval 
+      </div>
+      {% else %}
       {% if user.is_authenticated %}
+      <div id="leave-a-comment">
       <h5>Leave a comment:</h5>
       <p>{{ user.username }}</p>
       <form method="post">
          {{ comment_form | crispy }}
          {% csrf_token %}
-         <button type="submit" class="btn btn-lg">Submit</button>
+         <button id="comment-submit" type="submit" class="btn btn-lg">Submit</button>
       </form>
+      </div>
+      {% endif %}
       {% endif %}
    </div>
 </div>
