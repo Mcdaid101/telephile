@@ -1,20 +1,31 @@
 {% extends 'base.html' %} {% block content %}
 
 <div id="post-detail-view" class="container">
-    <div class="row">
-        <div>
-            <!--Title-->
-            <div id="title" class="col-12 d-flex justify-content-center"><h1>{{ post.title }}</h1></div>
-            <!--Image-->
-            <div id="image" class="col-12 d-flex justify-content-center">{{ post.image }}</div>
-            <!--Author, created on, likes, comments, category-->
-            <div id="author" class="col-12 d-flex justify-content-center">{{ post.author }}</div>
-            <!--Article Content-->
-            <div id="Article" class="col-12 d-flex justify-content-center">{{ post.content }}</div>
-            <!--Comments-->
-            <div id="comments" class="col-12 d-flex justify-content-center">{{ post.comments }}</div>
-        </div>
-    </div>
+   <!--Title-->
+   <div id="title" class="col-12 d-flex justify-content-center">
+      <h1>{{ post.title }}</h1>
+   </div>
+   <!--Image-->
+   <div id="image" class="col-12 d-flex justify-content-center">
+      {% if "placeholder" in post.featured_image.url %}
+      <img class="card-img-top" src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
+      {% else %}
+      <img class="card-img-top" src=" {{ post.featured_image.url }}">
+      {% endif %}
+      <!--Author, created on, likes, comments, category-->
+   </div>
+   <div id="image-bottom" class="row">
+    <h5>{{ post.author }} {{ post.created_on }}</h5>
+       <!--total comments loop goes here-->
+       <h5> Total comments:  Total likes: {{ post.number_of_likes }}</h5>
+       <h5><a href="#">{{ post.category }} </a></h5>
+  </div>
+   <!--Article Content-->
+   <div id="Article" class="col-12"><p>
+    {{ post.content | safe }}</p>
+   </div>
+   <!--Comments-->
+   <div id="comments" class="col-12">{{ post.comments }}</div>
 </div>
 
 {% endblock content %}

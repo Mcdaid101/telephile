@@ -23,7 +23,7 @@
               <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#">About</a>
@@ -40,12 +40,18 @@
                       <li><a class="dropdown-item" href="#">Documentary</a></li>
                     </ul>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Sign Up</a>
-                  </li>
+                  {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'account_signup' %}">Sign up</a>
+                    </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#">Log In</a>
                   </li>
+                  {% endif %}
                 </ul>
               </div>
             </div>
