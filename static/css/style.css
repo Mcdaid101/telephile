@@ -29,6 +29,22 @@ body {
  font-size: 200%;
 }
 
+#login {
+  margin: 0 auto;
+  margin-top: 10%;
+  border: 5px;
+  border-color: black;
+  background-color: aliceblue;
+  border-radius: 2%;
+  padding: 10px;
+}
+
+#sign-in-btn {
+  background: red;
+}
+
+
+
 @media screen and (max-width: 800px){
   #post-detail-view {
     max-width: 100%;
