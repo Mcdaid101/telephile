@@ -1,7 +1,9 @@
 body {
   background-color: black;
   color: white;
+  font-family: 'Roboto Condensed', sans-serif;
 }
+
 .nav-item {
   color: white;
 }
@@ -46,9 +48,12 @@ body {
   margin-top: 10%;
   border: 5px;
   border-color: black;
-  background-color: aliceblue;
+  background-color: white;
   border-radius: 2%;
   padding: 10px;
+  color: black;
+  font-size: 150%;
+  margin-bottom: 200px;
 }
 
 #sign-in-btn {
