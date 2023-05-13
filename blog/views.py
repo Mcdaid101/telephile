@@ -84,3 +84,13 @@ class PostLike(View):
 
 def about(request):
     return render(request, 'about.html')
+
+
+def drama(request):
+    view = Post.objects.filter(category=1)
+    return render(request, 'drama.html', {'view': view})
+
+
+def scifi(request):
+    view = Post.objects.filter(category=2)
+    return render(request, 'scifi.html', {'view': view})
