@@ -10,7 +10,7 @@
    <!--Image-->
    <div id="image" class="col-12 d-flex justify-content-center">
       {% if "placeholder" in post.featured_image.url %}
-      <img class="card-img-top" src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
+      <img class="card-img-top" src="https://images.pexels.com/photos/5197107/pexels-photo-5197107.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
       {% else %}
       <img class="card-img-top" src=" {{ post.featured_image.url }}">
       {% endif %}
@@ -46,7 +46,7 @@
     {{ post.content | safe }}</p>
    </div>
    <!--Comments-->
-   <div id="comment-section">
+   <div id="comment-section" style="color: black;">
       <div class="card">
          <div class="card-header">
            <h3>Comments Section</h3>
@@ -69,7 +69,7 @@
       {% else %}
       {% if user.is_authenticated %}
       <div id="leave-a-comment">
-      <h5>Leave a comment:</h5>
+      <h5 style="color: white">Leave a comment:</h5>
       <p>{{ user.username }}</p>
       <form method="post">
          {{ comment_form | crispy }}

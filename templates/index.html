@@ -2,6 +2,13 @@
 
 {% block content %}
 
+<div id="hero-container">
+    <img class="hero-image" src="https://sguru.org/wp-content/uploads/2018/04/tv-series.jpg">
+</div> 
+<div id="home-title">
+    <h1>Welcome to Telephile</h1>
+</div>
+
 <div class="container-fluid">
     <div class="row">
 
@@ -21,7 +28,7 @@
                                 {% endif %}
                                 <div class="image-flash">
                                     <p class="author">Author: {{ post.author }}</p>
-                                </div>
+                                </div>->
                             </div>
                             <a href="{% url 'post_detail' post.slug %}" class="post-link">
                                 <h2 class="card-title">{{ post.title }}</h2>
@@ -41,6 +48,7 @@
             </div>
         </div>
     </div>
+
     {% if is_paginated %}
     <nav aria-label="Page navigation">
         <ul class="pagination justify-content-center">
@@ -54,5 +62,4 @@
         </ul>
     </nav>
     {% endif %}
-</div>
 {%endblock%}

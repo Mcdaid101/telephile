@@ -1,3 +1,4 @@
+/* base.html */ 
 body {
   background-color: black;
   color: white;
@@ -8,25 +9,55 @@ body {
   color: white;
 }
 
-.navbar-light .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 0, 0, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+.navbar {
+  border-width: 2px;
+  border-color: white;
 }
 
-.navbar-light .navbar-toggler {
-  border: 1px solid red;
+#nav-line {
+  width: 100%;
+  color: white;
+}
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 2.5rem;    /* Footer height */
 }
 
 #footer {
-  margin-top: 30px;
-  position: fixed;
+  position: absolute;
   bottom: 0;
   width: 100%;
 }
 
+/* index.html */
+
+#hero-container {
+  border-bottom: 2px;
+  border-width: 2px;
+  border-color: white;
+  text-align: center;
+}
+
+.hero-image {
+  width: 100%;
+  max-height: 700px;
+}
+
+#home-title {
+  text-align: center;
+}
+
+/* post detail.html */
+
 #post-detail-view {
   margin: auto;
   max-width: 50%;
-  margin-bottom: 200px;
+  margin-top: 50px;
 }
 
 #image-bottom {
@@ -57,16 +88,33 @@ body {
 }
 
 #sign-in-btn {
-  background: red;
+  background: black;
+  color: white;
+}
+
+#sign-in-btn:hover,
+#comment-submit:hover {
+    color: black;
+    background: white;
+    border-color: black;
+    border-width: 2px;
 }
 
 #comments-section {
   margin-top: 30px;
-  margin-bottom: 150px;
 }
 
 #comment-submit {
-  margin-bottom: 100px;
+  margin-top: 10px;
+  background: white;
+  color: black;
+}
+
+#comment-submit:hover {
+  background-color: black;
+  color: white;
+  border-color: white;
+  border-width: 2px;
 }
 
 #comment-success {
@@ -87,9 +135,10 @@ body {
 
 .btn-like:hover,
 .btn-like:active {
-    color: #E84610;
-    background: transparent;
-    border: none;
+  color: black;
+  background: white;
+  border-color: black;
+  border-width: 2px;
 }
 
 @media screen and (max-width: 800px){
