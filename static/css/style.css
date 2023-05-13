@@ -19,17 +19,8 @@ body {
   color: white;
 }
 
-#page-container {
-  position: relative;
-  min-height: 100vh;
-}
-
-#content-wrap {
-  padding-bottom: 2.5rem;    /* Footer height */
-}
-
 #footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
 }
@@ -49,6 +40,7 @@ body {
 }
 
 #home-title {
+  margin-top: 20px;
   text-align: center;
 }
 
@@ -58,6 +50,7 @@ body {
   margin: auto;
   max-width: 50%;
   margin-top: 50px;
+  margin-bottom: 200px;
 }
 
 #image-bottom {
@@ -131,6 +124,8 @@ body {
   border-color: black;
   border-width: 10px;
   border-radius: 5%;
+  width: 800px;
+  text-align: center;
 }
 
 .btn-like:hover,
@@ -140,6 +135,24 @@ body {
   border-color: black;
   border-width: 2px;
 }
+
+/* about.html */
+
+#container-about {
+  max-width: 90%;
+}
+
+#about-card-1 {
+  height: 400px;
+  color: black;
+}
+
+#about-card-2 {
+  height: 400px;
+  color: black;
+}
+
+/* media queries */
 
 @media screen and (max-width: 800px){
   #post-detail-view {

@@ -1,13 +1,31 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div id="about-container" class="container" style="margin-top:30px;">
-    <h1>Welcome to Telephile</h1>
-    <p>The Web's best TV series review site.</p>
-    <div class="row">
-        <div class="col-sm" style="background-color: red;">column</div>
-        <div class="col-sm" style="background-color: blue">column</div>
-    </div>
+<div id="home-title">
+<h1>Welcome to Telephile</h1>
+<p>The Web's best TV series review site.</p>
 </div>
 
+<div class="container-about">
+<div class="row">
+    <div class="col-md-6">
+      <div id="about-card-1" class="card">
+        <div class="card-body">
+          <h5 class="card-title">Special title treatment</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div id="about-card-2" class="card">
+        <div class="card-body">
+          <h5 class="card-title">Special title treatment</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 {%endblock%}

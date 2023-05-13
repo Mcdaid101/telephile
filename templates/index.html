@@ -7,9 +7,13 @@
 </div> 
 <div id="home-title">
     <h1>Welcome to Telephile</h1>
+    <h2>The Internet's best TV series Review site</h2>
+</div>
+<div>
+    
 </div>
 
-<div class="container-fluid">
+<div class="container-fluid" style="margin-bottom: 200px;">
     <div class="row">
 
         <!-- Blog Entries Column -->
@@ -28,14 +32,14 @@
                                 {% endif %}
                                 <div class="image-flash">
                                     <p class="author">Author: {{ post.author }}</p>
-                                </div>->
+                                </div>
                             </div>
                             <a href="{% url 'post_detail' post.slug %}" class="post-link">
                                 <h2 class="card-title">{{ post.title }}</h2>
                             </a>
-                            <hr />
-                            <p class="card-text text-muted h6">{{ post.created_on}} <i class="far fa-heart"></i>
-                                {{ post.number_of_likes }} {{ post.series }} {{ post.category }}</p>
+                            <hr/>
+                            <p class="card-text text-muted h6">{{ post.created_on}}&nbsp;&nbsp;&nbsp; <i class="far fa-heart"></i>
+                                {{ post.number_of_likes }} &nbsp;&nbsp;&nbsp; <a href="#">{{ post.category }}</a></p>
                         </div>
                     </div>
                 </div>
