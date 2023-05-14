@@ -94,3 +94,18 @@ def drama(request):
 def scifi(request):
     view = Post.objects.filter(category=2)
     return render(request, 'scifi.html', {'view': view})
+
+
+def fantasy(request):
+    view = Post.objects.filter(category=3)
+    return render(request, 'fantasy.html', {'view': view})
+
+
+def comedy(request):
+    view = Post.objects.filter(category=4)
+    return render(request, 'comedy.html', {'view': view})
+
+
+def documentary(request):
+    view = Post.objects.filter(category=5)
+    return render(request, 'scifi.html', {'view': view})
