@@ -145,19 +145,12 @@ padding-top: 10px;
 }
 
 /* about.html */
-
-#container-about {
+#about-card {
+  margin: 0 auto;
   max-width: 90%;
-}
-
-#about-card-1 {
-  height: 400px;
+  height: 700px;
   color: black;
-}
-
-#about-card-2 {
-  height: 400px;
-  color: black;
+  text-align: center;
 }
 
 /* media queries */
