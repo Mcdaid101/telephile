@@ -153,6 +153,13 @@ padding-top: 10px;
   text-align: center;
 }
 
+
+/* category pages */
+#category-card {
+  margin-bottom: 50px; 
+  margin-top: 50px;
+}
+
 /* media queries */
 
 @media screen and (max-width: 800px){
