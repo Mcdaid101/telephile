@@ -44,6 +44,14 @@ body {
   text-align: center;
 }
 
+
+
+#post-title, .author {
+color: black;
+text-transform: capitalize;
+padding-top: 10px;
+}
+
 /* post detail.html */
 
 #post-detail-view {

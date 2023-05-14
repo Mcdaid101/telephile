@@ -36,9 +36,9 @@
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <a class="dropdown-item" href="{% url 'drama' %}">Drama</a>
               <a class="dropdown-item" href="{% url 'scifi' %}">Sci-Fi</a>
-              <a class="dropdown-item" href="#">Fantasy</a>
-              <a class="dropdown-item" href="#">Comedy</a>
-              <a class="dropdown-item" href="#">Documentary</a>
+              <a class="dropdown-item" href="{% url 'fantasy' %}">Fantasy</a>
+              <a class="dropdown-item" href="{% url 'comedy' %}">Comedy</a>
+              <a class="dropdown-item" href="{% url 'documentary' %}">Documentary</a>
             </div>
           </li>
           {% if user.is_authenticated %}
@@ -72,9 +72,8 @@
       <!-- Content Goes here -->
       {% endblock content %}
 
-    <footer id="footer"  style="background-color: black; border-top: 2px solid white; font-size: 150%;">
+    <footer id="footer"  style="background-color: black; border-top: 2px solid white; font-size: 110%;">
         <div class="container text-white text-center">
-            <p>Telephile</p>
             <p class="m-0 text-center text-white">Check us out on:&nbsp;&nbsp;&nbsp;<i class="fab fa-facebook-square ms-3"></i>&nbsp;&nbsp;&nbsp;
               <i class="fab fa-twitter-square ms-3"></i>&nbsp;&nbsp;&nbsp;
               <i class="fab fa-instagram-square ms-3"></i>&nbsp;&nbsp;&nbsp;

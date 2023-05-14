@@ -30,16 +30,14 @@
                                 {% else %}
                                 <img class="card-img-top" src=" {{ post.featured_image.url }}">
                                 {% endif %}
-                                <div class="image-flash">
-                                    <p class="author">Author: {{ post.author }}</p>
-                                </div>
                             </div>
-                            <a href="{% url 'post_detail' post.slug %}" class="post-link">
-                                <h2 class="card-title">{{ post.title }}</h2>
+                            <a href="{% url 'post_detail' post.slug %}" style="text-decoration: none;" class="post-link">
+                                <h2 class="card-title" id="post-title">{{ post.title }}</h2>
                             </a>
+                            <p class="author">By: {{ post.author }}</p>
                             <hr/>
                             <p class="card-text text-muted h6">{{ post.created_on}}&nbsp;&nbsp;&nbsp; <i class="far fa-heart"></i>
-                                {{ post.number_of_likes }} &nbsp;&nbsp;&nbsp; <a href="#">{{ post.category }}</a></p>
+                                {{ post.number_of_likes }} &nbsp;&nbsp;&nbsp; <a href="#" style="text-decoration: none;">{{ post.category }}</a></p>
                         </div>
                     </div>
                 </div>
