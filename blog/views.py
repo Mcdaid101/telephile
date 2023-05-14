@@ -6,6 +6,7 @@ from .models import Post
 from .forms import CommentForm
 from django.urls import reverse
 from django.template import loader
+from django.views.generic import CreateView
 
 
 class PostList(generic.ListView):
@@ -109,3 +110,9 @@ def comedy(request):
 def documentary(request):
     view = Post.objects.filter(category=5)
     return render(request, 'scifi.html', {'view': view})
+
+
+class AddPostView(CreateView):
+    model = Post
+    template_name = 'add_post.html'
+    fields = '__all__'

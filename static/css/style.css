@@ -148,9 +148,10 @@ padding-top: 10px;
 #about-card {
   margin: 0 auto;
   max-width: 90%;
-  height: 700px;
+  height: 1500px;
   color: black;
   text-align: center;
+  margin-bottom: 200px;
 }
 
 
