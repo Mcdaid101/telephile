@@ -22,6 +22,9 @@ class Category(models.Model):
     class Meta:
         db_table = "category"
 
+    def get_absolute_url(self):
+        return reverse('home')
+
 
 class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)

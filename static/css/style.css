@@ -88,12 +88,14 @@ padding-top: 10px;
   margin-bottom: 200px;
 }
 
-#sign-in-btn {
+#sign-in-btn,
+#signup-btn {
   background: black;
   color: white;
 }
 
 #sign-in-btn:hover,
+#signup-btn:hover,
 #comment-submit:hover {
     color: black;
     background: white;
