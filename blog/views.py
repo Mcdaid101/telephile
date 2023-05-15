@@ -3,10 +3,12 @@ from django.views import generic, View
 from django.http import HttpResponseRedirect
 from django.http import HttpResponse
 from .models import Post
-from .forms import CommentForm
+from .forms import CommentForm, reviewForm
 from django.urls import reverse
 from django.template import loader
 from django.views.generic import CreateView
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.utils.text import slugify
 
 
 class PostList(generic.ListView):
@@ -112,7 +114,15 @@ def documentary(request):
     return render(request, 'scifi.html', {'view': view})
 
 
-class AddPostView(CreateView):
-    model = Post
+class AddPostView(CreateView, LoginRequiredMixin):
+    form_class = reviewForm
     template_name = 'add_post.html'
-    fields = '__all__'
+
+    def get_success_url(self):
+        return reverse('home')
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        form.instance.slug = slugify(form.cleaned_data['title'])
+        
+        return super().form_valid(form)

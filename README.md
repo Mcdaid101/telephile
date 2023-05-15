@@ -1,108 +1,406 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Red Hugh's Adventure
 
-Welcome Mcdaid101,
+Telephile is an online TV series website where users can create an account and leave reviews for different TV series.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+You can find the live site [Here](https://red-hughs-adventure.herokuapp.com/).
+####
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+![Website Mock Up]()
+&nbsp;
 
-## Gitpod Reminders
+# Purpose
+I built this website as my fourth project for the code institutes full stack development and e-commerce applications course. 
+I built this website from scratch using the knowledge I gained from the course where I studied the basics of Python, HTML, Javascript and CSS.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+# Target audience
+* Tv Lovers 
+* Bloggers
 
-`python3 -m http.server`
+## How to play
+* This game is constructed like a traditional text adventure game where the player is asked to input what direction they would like to head. 
 
-A blue button should appear to click: _Make Public_,
+* For example head north for kitchen, head south for bedroom and head east for bathroom.
 
-Another blue button should appear to click: _Open Browser_.
+* Once the desired input is entered the player will arrive there and be allowed to return to previous locations with items picked up from other ones.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+* Items acquired through visiting new locations and solving puzzles are vital to the player's progress and will allow he/she to escape and complete the game. 
 
-A blue button should appear to click: _Make Public_,
+* If a player is caught or killed by the guards they will fail the game and be offered another attempt. 
 
-Another blue button should appear to click: _Open Browser_.
+## Features 
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+1.  The game features 10 different rooms / areas to explore some are possible to return to while others such as the area you began in, are not.
 
-To log into the Heroku toolbelt CLI:
+<details><summary>Different Areas</summary>
+<p>
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+![Tunnels](assets/images/tunnels.png)
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+![watch house](assets/images/watchhouse.png)
 
-------
+![dungeon](assets/images/dungeon.png)
 
-## Release History
+![courtyard](assets/images/courtyard.png)
+</p>
+</details>
+<br>
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+2.  The player is given multiple choices to explore a different direction in each room / area they venture into. 
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+3. The game accepts user input to add their name, which is referenced throughout and to move direction and tells the player to enter which word to go which direction. 
+<details><summary>Multiple choices for navigation</summary>
+<p>
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+![courtyard](assets/images/courtyard.png)
+</p>
+</details>
+<br>
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+4. User input can also determine whether the player wants to undertake a certain task or pick up an object. 
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+<details><summary>Choice of task</summary>
+<p>
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+![wardens office](assets/images/wardens_office%20.png)
+</p>
+</details>
+<br>
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+5. Validation is implemented on every choice the player can make, if a player enters something other than the game requested, they will be met with text that is coloured red to tell them the only options they can enter to proceed. 
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+<details><summary>Input validation</summary>
+<p>
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+![courtyard](assets/images/must_enter_name.png)
+</p>
+</details>
+<br>
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+6. If the player is caught or killed by the guards he will lose, the game will then offer them another chance to play again or to exit the game entirely. 
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+<details><summary>Game over</summary>
+<p>
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+![courtyard](assets/images/key_failed.png)
+</p>
+</details>
+<br>
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+7. The delay print function makes the text print out slowly as if it is just appearing on screen one letter at a time mimicking text adventure games which were popular in the 1980's.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+8. The text's green color is also chosen to make the game seem like a terminal adventure game from the past, it gives the game a retro and authentic feel.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+9. To differentiate between each room unique ASCII art is loaded on entering giving the game a better design. 
 
-------
+10. A progress bar which simulates a new area rendering is added to the bottom of each area when the player inputs which direction he would like to go. 
 
-## FAQ about the uptime script
+<details><summary>Loading area bar</summary>
+<p>
 
-**Why have you added this script?**
+![courtyard](assets/images/tunnels.png)
+</p>
+</details>
+<br>
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+## Future Features 
 
-**How will this affect me?**
+* An OOP combat system when facing the guards 
+* Allow players to interact with their fellow prisoner Red Hugh and find out more about him. 
+<br>
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+# Design 
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+![Flow Chart](assets/images/flow_chart%20.png)
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+<br>
 
-**So….?**
+* I designed this game to make it look like an old 80's style terminal game.
+* To do this I created the delay_print() function which printed out the game's script in a typewriter esque way.
+* Using the colorama library I gave the text a green colour with Fore.GREEN, to further it's traditional terminal game feel.
+* I used Fore.RED to give any validation fails and the game ending screens the colour red. 
+* Textualize Rich created the progress bar to simulate the new areas rendering.
+* The ASCII art comes from an online Generator and from an ASCII art archive which was very useful and saved me typing out any ASCII images. 
+* Regex helped me with input validation to ensure that the players inputs matched the games input directions
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+<br>
 
-**Can I opt out?**
+## Issues with design
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+* 
+<br>
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+* 
+<br>
 
-**Anything more?**
+* 
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+# Technology Used 
+<br>
 
----
+## Languages 
+* Python
+* HTML
+* CSS 
+* Javascript
+* Django framework
+<br>
 
-Happy coding!
+## Tools and Frameworks
+* Git 
+* Github 
+* Vs Code IDE in browser
+* Django
+* Techsini Multi Device Mockup Generator used in this readme to display an image of the website on different devices 
+* Heroku
+
+# Bugs 
+
+* 
+<br>
+
+* 
+<br>
+
+* No bugs remained after this. 
+<br>
+
+# User stories
+
+## First time stories 
+* As a first time user: I want to be able to know how to play the game<br>
+Testing done to make sure that game instructions on how to navigate to each room display in the terminal  
+<details><summary>First time user 1</summary>
+<p>
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+|Game directions | Check Direction options appear in the python terminal | Directions load at end of each scene giving you option to move on to next area or go back the way you came  | Works as expected |
+</p>
+</details>
+<br>
+<br>
+
+* As a first time user: I want to be able to navigate through the game.  <br>
+ Testing done to ensure that the game is fully functional.
+<details><summary>First time user 2</summary>
+<p>
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Game Directions | Check that each direction you enter brings you to the said location | The player moves on to the expected room they entered the direction for and it appears in the "you chose to enter: " line | Works as expected |
+</p>
+</details>
+<br>
+<br>
+
+* As a first time user: I want to be able to input my name in the Game<br>
+ Testing done to ensure that the players Name is asked upon the game's start.
+<details><summary>First time user 3</summary>
+<p>
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+|Name input | Load up the game in the Heroku terminal, on the title screen it will ask the player to input their name | The game will welcome you with your name | Works as expected |
+</p>
+</details>
+<br>
+<br>
+
+* As a first time user: I want to be able to re-enter my name if I typed nothing and pressed enter by mistake <br>
+ Testing done to ensure that when the game will not commence unless the player has entered a name.
+<details><summary>First time user 4</summary>
+<p>
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+|Name input |The player must enter a name for the game to commence  | With no name entered the gane will not commence, the terminal will ask the player for their name again until they enter something | Works as expected |
+</p>
+</details>
+<br>
+<br>
+
+* As a first time user: I want another attempt at entering a direction if I mispress a key <br>
+ Testing done to ensure that the game will repeatedly ask which way the player would like to go until they input one of the directions stated. 
+<details><summary>First time user 5</summary>
+<p>
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+|Directions validation |Input something other than the requested input for directions | The game will request you only enter one of the stated input directions | Works as expected |
+</p>
+</details>
+<br>
+<br>
+
+* As a first time user: I want different ways of winning the game <br>
+Testing done to ensure the multiple ways of winning the game work.
+<details><summary>First time user 6</summary>
+<p>
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+|Winning the game | Escaping by either having a sword or gaining the key  | When the player acquires the sword or key variables they can then complete the game | Works as expected |
+</p>
+</details>
+<br>
+<br>
+
+* As a first time user: I want to view the ASCII art to differentiate between rooms and enjoy the game<br>
+ Testing done to ensure that the game displays the ASCII art.
+<details><summary>First time user 7</summary>
+<p>
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| ASCII art | Make sure that the ASCII art loads for each area and at the beginning and end of each game  | The ASCII art displays for each new scene and beginning and end of each game | Works as expected |
+</p>
+</details>
+<br>
+<br>
+
+*  As a first time user: I want to be able to play the game again if I lose <br>
+ Testing done to ensure that once you lose the game you can play again.
+<details><summary>First time user 8</summary>
+<p>
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Play again option | Once you lose the game you can input yes to have another go | The game will reload and you can play again | Works as expected |
+</p>
+</details>
+<br>
+<br>
+
+* As a first time user: I want to be able to see the next room is loading. <br>
+Testing done to ensure that the progress bar loads.
+<details><summary>First time user 9</summary>
+<p>
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+|Loading area bar | Check that the loading area bar loads upon the end of each scene | Progress bar appears at end of each scene | Works as expected |
+</p>
+</details>
+<br>
+<br>
+
+## Returning stories
+
+* As a returning user: I want to be able to play the game again if I win and try win another way<br>
+ Testing done to ensure that once you win the game you can play again.
+<details><summary>Returning User 1</summary>
+<p>
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Play again option | Once you win the game you can replay the game and try complete it another way | Option appears once you have won the game to replay the game and win another way | Works as expected |
+</p>
+</details>
+<br>
+<br>
+
+* As a returning user: I want to be able to refuse or accept different tasks / objects <br>
+Testing done to ensure that the player can refuse or accept different tasks / objects.
+<details><summary>Returning user 2</summary>
+<p>
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+|refuse or accept tasks and picking up objects | The player can refuse or accept to play the pickpocket game or pick up the sword | Accepting or refusing these tasks/objects have profound impacts on the game's narrative.  | Works as expected |
+</p>
+</details>
+<br>
+<br>
+
+## Owner stories 
+* As the site owner: I want to be able to maintain the games code easily <br>
+Testing done to ensure that the code is easily readable and maintained
+<details><summary>Site owner 1</summary>
+<p>
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+|ASCII art images and game scripts are in a dictionary | placed images and scripts in dictionaries  | Code much more readable and maintainable | Works as expected |
+</p>
+</details>
+<br>
+<br>
+
+* As the site owner: I want players to have a new experience each time they play  <br>
+Testing done to ensure that players have multiple different ways to win and lose. 
+<details><summary>Site owner 2</summary>
+<p>
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+|Different ways to win and lose | Check to see the multiple different ways to win and lose produce the win and lose scenes | Win and lose functions appear at different ways to win and lose  | Works as expected |
+</p>
+</details>
+<br>
+<br>
+
+* As the site owner: I want users to get different answers for a challenge to keep them interested and enhance the games replay value.  <br>
+Testing done to ensure the warden mini game produces a different answer with each game.
+<details><summary>Site owner 3</summary>
+<p>
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Pickpocket mini game produces a different each time you play | Ensure the Math.random function works in the pickpocket mini game | The pickpocket game produces a random answer each game | Works as expected |
+</p>
+</details>
+<br>
+
+# Testing and validation
+
+I have manually tested this project by doing the following:
+
+* Passed the project through a pep8 linter and confirmed there is no problems.
+* Tested in my gitpod terminal and the Heroku terminal.
+* Tested each user story to make sure each one passes. 
+
+Pep8
+* No errors were returned from Pep8online.com or from extendsclass.com/pythontester. 
+
+
+# Deployment 
+
+## Creating this project
+This project was created by navigating to the Code Institute's Gitpod student template and clicking the 'use this template' button. I then inputted the repository name "telephile" and included all branches. With the repository now created, I used the browser version of Vs Code to create the project. 
+<br>
+
+I used the following commands throughout this project:
+* Git add . - This added my file to the staging area to be committed
+* Git commit -m - This command committed any changes to the local repository along with a message
+* Git push - pushed my changes to the github repository and to Heroku 
+* git reset --hard HEAD^ - This removed my last commit 
+* python3 manage.py runserver - This ran my code in the terminal
+* python3 manage.py makemigrations - This made my migrations
+* python3 manage.py migrate - This migrated my changes to my databases
+
+## Heroku
+ This website is deployed on the Code Institute's mock terminal on Heroku
+
+### Steps for deployment 
+* Fork or clone this repository
+* Created a new heroku app through build app
+* Set the buildpacks to Python and NodeJs in that specific order
+* Linked the heroku app to the repository via github
+* Clicked automatic deploys so each git push would automatically go to the heroku app
+* This was ideal for testing so I could see what the game looked like on the Heroku terminal with each git push
+
+# Credits 
+
+## Code 
+* 
+* 
+* 
+
+## Media 
+* 
+* 
+
+## Acknowledgements 
+* I would like to thank my mentor Ronan Mc Clelland for his help and guidance while I built this project.
+* I would like to thank my family for their love and support.
+* And finally my girlfriend for her advice on my site's style. 
