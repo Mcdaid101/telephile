@@ -1,5 +1,5 @@
 from . import views
-from .views import AddPostView
+from .views import AddPostView, yourReviews
 from django.urls import path
 
 urlpatterns = [
@@ -13,4 +13,5 @@ urlpatterns = [
     path('comedy', views.comedy, name='comedy'),
     path('documentary', views.documentary, name='documentary'),
     path('add_post', AddPostView.as_view(), name='add_post'),
+    path('yourReviews', views.yourReviews, name='your_reviews'),
 ]

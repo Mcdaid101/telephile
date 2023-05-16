@@ -152,3 +152,9 @@ This renders the documentary category page with any posts within that category
 def documentary(request):
     view = Post.objects.filter(category=5, status=1).values()
     return render(request, 'scifi.html', {'view': view})
+
+
+def yourReviews(request):
+    user = request.user
+    view = Post.objects.filter(author=user, status=1).values()
+    return render(request, 'scifi.html', {'view': view})
