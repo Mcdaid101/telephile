@@ -157,4 +157,4 @@ def documentary(request):
 def yourReviews(request):
     user = request.user
     view = Post.objects.filter(author=user, status=1).values()
-    return render(request, 'scifi.html', {'view': view})
+    return render(request, 'your_reviews.html', {'view': view})
