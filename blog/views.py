@@ -18,6 +18,26 @@ class PostList(generic.ListView):
     paginate_by = 6
 
 
+"""
+Allows user to post their own review
+"""
+class AddPostView(CreateView, LoginRequiredMixin):
+    form_class = reviewForm
+    template_name = 'add_post.html'
+
+    def get_success_url(self):
+        return reverse('home')
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        form.instance.slug = slugify(form.cleaned_data['title'])
+        
+        return super().form_valid(form)
+
+
+"""
+Post details, view once posts are clicked on to read more
+"""
 class PostDetail(View):
 
     def get(self, request, slug, *args, **kwargs):
@@ -72,7 +92,9 @@ class PostDetail(View):
             },
         )
 
-
+"""
+View which gives the ability for users to like and unlike posts
+"""
 class PostLike(View):
     
     def post(self, request, slug, *args, **kwargs):
@@ -85,44 +107,48 @@ class PostLike(View):
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
 
+"""
+Renders the about page
+"""
 def about(request):
     return render(request, 'about.html')
 
 
+"""
+This renders the drama category page with any posts within that category
+"""
 def drama(request):
     view = Post.objects.filter(category=1)
     return render(request, 'drama.html', {'view': view})
 
 
+"""
+This renders the sci-fi category page with any posts within that category
+"""
 def scifi(request):
     view = Post.objects.filter(category=2)
     return render(request, 'scifi.html', {'view': view})
 
 
+"""
+This renders the fantasy category page with any posts within that category
+"""
 def fantasy(request):
     view = Post.objects.filter(category=3)
     return render(request, 'fantasy.html', {'view': view})
 
 
+"""
+This renders the comedy category page with any posts within that category
+"""
 def comedy(request):
     view = Post.objects.filter(category=4)
     return render(request, 'comedy.html', {'view': view})
 
 
+"""
+This renders the documentary category page with any posts within that category
+"""
 def documentary(request):
     view = Post.objects.filter(category=5)
     return render(request, 'scifi.html', {'view': view})
-
-
-class AddPostView(CreateView, LoginRequiredMixin):
-    form_class = reviewForm
-    template_name = 'add_post.html'
-
-    def get_success_url(self):
-        return reverse('home')
-
-    def form_valid(self, form):
-        form.instance.author = self.request.user
-        form.instance.slug = slugify(form.cleaned_data['title'])
-        
-        return super().form_valid(form)

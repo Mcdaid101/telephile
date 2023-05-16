@@ -15,7 +15,7 @@
         <div class="card-body">
           {% if user.is_authenticated %}
           <h1 class="card-title">Post a Review</h1>
-          <form method="POST">
+          <form method="POST" action="{% url 'home'%}">
             {% csrf_token %}
             {{form|crispy}}
             <input type="submit" class="btn btn-dark"></input>

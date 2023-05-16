@@ -16,20 +16,12 @@ I built this website from scratch using the knowledge I gained from the course w
 * Tv Lovers 
 * Bloggers
 
-## How to play
-* This game is constructed like a traditional text adventure game where the player is asked to input what direction they would like to head. 
+## How to 
 
-* For example head north for kitchen, head south for bedroom and head east for bathroom.
-
-* Once the desired input is entered the player will arrive there and be allowed to return to previous locations with items picked up from other ones.
-
-* Items acquired through visiting new locations and solving puzzles are vital to the player's progress and will allow he/she to escape and complete the game. 
-
-* If a player is caught or killed by the guards they will fail the game and be offered another attempt. 
 
 ## Features 
 
-1.  The game features 10 different rooms / areas to explore some are possible to return to while others such as the area you began in, are not.
+
 
 <details><summary>Different Areas</summary>
 <p>
@@ -104,8 +96,7 @@ I built this website from scratch using the knowledge I gained from the course w
 
 ## Future Features 
 
-* An OOP combat system when facing the guards 
-* Allow players to interact with their fellow prisoner Red Hugh and find out more about him. 
+* 
 <br>
 
 # Design 
@@ -114,13 +105,7 @@ I built this website from scratch using the knowledge I gained from the course w
 
 <br>
 
-* I designed this game to make it look like an old 80's style terminal game.
-* To do this I created the delay_print() function which printed out the game's script in a typewriter esque way.
-* Using the colorama library I gave the text a green colour with Fore.GREEN, to further it's traditional terminal game feel.
-* I used Fore.RED to give any validation fails and the game ending screens the colour red. 
-* Textualize Rich created the progress bar to simulate the new areas rendering.
-* The ASCII art comes from an online Generator and from an ASCII art archive which was very useful and saved me typing out any ASCII images. 
-* Regex helped me with input validation to ensure that the players inputs matched the games input directions
+* 
 
 <br>
 
@@ -167,118 +152,118 @@ I built this website from scratch using the knowledge I gained from the course w
 # User stories
 
 ## First time stories 
-* As a first time user: I want to be able to know how to play the game<br>
-Testing done to make sure that game instructions on how to navigate to each room display in the terminal  
+* As a first time user: I want to be able <br>
+Testing done to make sure that 
 <details><summary>First time user 1</summary>
 <p>
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-|Game directions | Check Direction options appear in the python terminal | Directions load at end of each scene giving you option to move on to next area or go back the way you came  | Works as expected |
+| | |   | Works as expected |
 </p>
 </details>
 <br>
 <br>
 
-* As a first time user: I want to be able to navigate through the game.  <br>
- Testing done to ensure that the game is fully functional.
+* As a first time user:   <br>
+ Testing done to ensure that 
 <details><summary>First time user 2</summary>
 <p>
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| Game Directions | Check that each direction you enter brings you to the said location | The player moves on to the expected room they entered the direction for and it appears in the "you chose to enter: " line | Works as expected |
+|  |  |  | Works as expected |
 </p>
 </details>
 <br>
 <br>
 
-* As a first time user: I want to be able to input my name in the Game<br>
- Testing done to ensure that the players Name is asked upon the game's start.
+* As a first time user: I want to be able to <br>
+  Testing done to ensure that 
 <details><summary>First time user 3</summary>
 <p>
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-|Name input | Load up the game in the Heroku terminal, on the title screen it will ask the player to input their name | The game will welcome you with your name | Works as expected |
+| | |  | Works as expected |
 </p>
 </details>
 <br>
 <br>
 
-* As a first time user: I want to be able to re-enter my name if I typed nothing and pressed enter by mistake <br>
- Testing done to ensure that when the game will not commence unless the player has entered a name.
+* As a first time user: I want to be able to  <br>
+ Testing done to ensure that 
 <details><summary>First time user 4</summary>
 <p>
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-|Name input |The player must enter a name for the game to commence  | With no name entered the gane will not commence, the terminal will ask the player for their name again until they enter something | Works as expected |
+||  |  | Works as expected |
 </p>
 </details>
 <br>
 <br>
 
-* As a first time user: I want another attempt at entering a direction if I mispress a key <br>
- Testing done to ensure that the game will repeatedly ask which way the player would like to go until they input one of the directions stated. 
+* As a first time user: I want  <br>
+ Testing done to ensure that 
 <details><summary>First time user 5</summary>
 <p>
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-|Directions validation |Input something other than the requested input for directions | The game will request you only enter one of the stated input directions | Works as expected |
+| | |  | Works as expected |
 </p>
 </details>
 <br>
 <br>
 
-* As a first time user: I want different ways of winning the game <br>
-Testing done to ensure the multiple ways of winning the game work.
+* As a first time user: I want <br>
+Testing done to ensure the
 <details><summary>First time user 6</summary>
 <p>
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-|Winning the game | Escaping by either having a sword or gaining the key  | When the player acquires the sword or key variables they can then complete the game | Works as expected |
+| |   |  | Works as expected |
 </p>
 </details>
 <br>
 <br>
 
-* As a first time user: I want to view the ASCII art to differentiate between rooms and enjoy the game<br>
- Testing done to ensure that the game displays the ASCII art.
+* As a first time user: I want to <br>
+ Testing done to ensure that 
 <details><summary>First time user 7</summary>
 <p>
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| ASCII art | Make sure that the ASCII art loads for each area and at the beginning and end of each game  | The ASCII art displays for each new scene and beginning and end of each game | Works as expected |
+|  |  |  | Works as expected |
 </p>
 </details>
 <br>
 <br>
 
-*  As a first time user: I want to be able to play the game again if I lose <br>
- Testing done to ensure that once you lose the game you can play again.
+*  As a first time user: I want to <br>
+ Testing done to ensure that 
 <details><summary>First time user 8</summary>
 <p>
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| Play again option | Once you lose the game you can input yes to have another go | The game will reload and you can play again | Works as expected |
+|  |  |  | Works as expected |
 </p>
 </details>
 <br>
 <br>
 
-* As a first time user: I want to be able to see the next room is loading. <br>
-Testing done to ensure that the progress bar loads.
+* As a first time user: I want to be able to  <br>
+Testing done to ensure that 
 <details><summary>First time user 9</summary>
 <p>
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-|Loading area bar | Check that the loading area bar loads upon the end of each scene | Progress bar appears at end of each scene | Works as expected |
+| |  |  | Works as expected |
 </p>
 </details>
 <br>
@@ -286,67 +271,67 @@ Testing done to ensure that the progress bar loads.
 
 ## Returning stories
 
-* As a returning user: I want to be able to play the game again if I win and try win another way<br>
- Testing done to ensure that once you win the game you can play again.
+* As a returning user: I want to be able to <br>
+ Testing done to ensure that 
 <details><summary>Returning User 1</summary>
 <p>
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| Play again option | Once you win the game you can replay the game and try complete it another way | Option appears once you have won the game to replay the game and win another way | Works as expected |
+|  |  |  | Works as expected |
 </p>
 </details>
 <br>
 <br>
 
-* As a returning user: I want to be able to refuse or accept different tasks / objects <br>
-Testing done to ensure that the player can refuse or accept different tasks / objects.
+* As a returning user: I want to be able to  <br>
+Testing done to ensure that 
 <details><summary>Returning user 2</summary>
 <p>
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-|refuse or accept tasks and picking up objects | The player can refuse or accept to play the pickpocket game or pick up the sword | Accepting or refusing these tasks/objects have profound impacts on the game's narrative.  | Works as expected |
+| |  |   | |
 </p>
 </details>
 <br>
 <br>
 
 ## Owner stories 
-* As the site owner: I want to be able to maintain the games code easily <br>
-Testing done to ensure that the code is easily readable and maintained
+* As the site owner:  <br>
+Testing done to ensure that 
 <details><summary>Site owner 1</summary>
 <p>
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-|ASCII art images and game scripts are in a dictionary | placed images and scripts in dictionaries  | Code much more readable and maintainable | Works as expected |
+|  | | | Works as expected |
 </p>
 </details>
 <br>
 <br>
 
-* As the site owner: I want players to have a new experience each time they play  <br>
-Testing done to ensure that players have multiple different ways to win and lose. 
+* As the site owner:   <br>
+Testing done to ensure that 
 <details><summary>Site owner 2</summary>
 <p>
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-|Different ways to win and lose | Check to see the multiple different ways to win and lose produce the win and lose scenes | Win and lose functions appear at different ways to win and lose  | Works as expected |
+| |  |   | Works as expected |
 </p>
 </details>
 <br>
 <br>
 
-* As the site owner: I want users to get different answers for a challenge to keep them interested and enhance the games replay value.  <br>
-Testing done to ensure the warden mini game produces a different answer with each game.
+* As the site owner: I want users to   <br>
+Testing done to ensure 
 <details><summary>Site owner 3</summary>
 <p>
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| Pickpocket mini game produces a different each time you play | Ensure the Math.random function works in the pickpocket mini game | The pickpocket game produces a random answer each game | Works as expected |
+|  |  |  | Works as expected |
 </p>
 </details>
 <br>
