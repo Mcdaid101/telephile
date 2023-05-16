@@ -24,14 +24,14 @@ Allows user to post their own review
 class AddPostView(CreateView, LoginRequiredMixin):
     form_class = reviewForm
     template_name = 'add_post.html'
-
+    
     def get_success_url(self):
-        return reverse('home')
+        return reverse('add_post')
 
     def form_valid(self, form):
         form.instance.author = self.request.user
         form.instance.slug = slugify(form.cleaned_data['title'])
-        
+
         return super().form_valid(form)
 
 
@@ -118,7 +118,7 @@ def about(request):
 This renders the drama category page with any posts within that category
 """
 def drama(request):
-    view = Post.objects.filter(category=1)
+    view = Post.objects.filter(category=1, status=1).values()
     return render(request, 'drama.html', {'view': view})
 
 
@@ -126,7 +126,7 @@ def drama(request):
 This renders the sci-fi category page with any posts within that category
 """
 def scifi(request):
-    view = Post.objects.filter(category=2)
+    view = Post.objects.filter(category=2, status=1).values()
     return render(request, 'scifi.html', {'view': view})
 
 
@@ -134,7 +134,7 @@ def scifi(request):
 This renders the fantasy category page with any posts within that category
 """
 def fantasy(request):
-    view = Post.objects.filter(category=3)
+    view = Post.objects.filter(category=3, status=1).values()
     return render(request, 'fantasy.html', {'view': view})
 
 
@@ -142,7 +142,7 @@ def fantasy(request):
 This renders the comedy category page with any posts within that category
 """
 def comedy(request):
-    view = Post.objects.filter(category=4)
+    view = Post.objects.filter(category=4, status=1).values()
     return render(request, 'comedy.html', {'view': view})
 
 
@@ -150,5 +150,5 @@ def comedy(request):
 This renders the documentary category page with any posts within that category
 """
 def documentary(request):
-    view = Post.objects.filter(category=5)
+    view = Post.objects.filter(category=5, status=1).values()
     return render(request, 'scifi.html', {'view': view})

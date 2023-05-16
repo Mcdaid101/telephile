@@ -17,13 +17,13 @@
                       {% else %}
                         <img class="card-img-top"src=" {{ x.featured_image.url }}">
                       {% endif %}
-                      <a href="#" style="text-decoration: none;" class="post-link">
+                      <a href="{% url 'post_detail' x.slug %}" style="text-decoration: none;" class="post-link">
                         <h2 class="card-title" id="post-title">{{ x.title }}</h2>
                     </a>
                     <p class="author">By: {{ x.author }}</p>
                     <hr/>
                     <p class="card-text text-muted h6">{{ x.created_on}}&nbsp;&nbsp;&nbsp; <i class="far fa-heart"></i>
-                        {{ x.number_of_likes }} &nbsp;&nbsp;&nbsp; <a href="#" style="text-decoration: none;">{{ x.category }}</a></p>
+                        {{ x.number_of_likes }} &nbsp;&nbsp;&nbsp; {{ x.category }}</p>
                     </div>
                 </div>
             </div>

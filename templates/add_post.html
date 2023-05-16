@@ -8,14 +8,16 @@
 <p>The Web's best TV series review site.</p>
 </div>
 
+<p>{{ success }}</p>
+
 <div class="container-about">
-<div class="row">
-    <div class="col-sm-12">
-      <div id="about-card" class="card">
-        <div class="card-body">
+   <div class="row">
+      <div class="col-sm-12">
+        <div id="about-card" class="card">
+          <div class="card-body">
           {% if user.is_authenticated %}
           <h1 class="card-title">Post a Review</h1>
-          <form method="POST" action="{% url 'home'%}">
+          <form method="POST" enctype="multipart/form-data">
             {% csrf_token %}
             {{form|crispy}}
             <input type="submit" class="btn btn-dark"></input>
