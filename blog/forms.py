@@ -18,3 +18,5 @@ class reviewForm(forms.ModelForm):
             'content': forms.TextInput(),
             'category': forms.Select(),
             }
+
+

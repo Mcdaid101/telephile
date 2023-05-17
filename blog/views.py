@@ -153,7 +153,9 @@ def documentary(request):
     view = Post.objects.filter(category__category="Documentary", status=1)
     return render(request, 'categories.html', {'view': view})
 
-
+"""
+This renders the users own reviews
+"""
 def yourReviews(request):
     user = request.user
     view = Post.objects.filter(author=user, status=1)
