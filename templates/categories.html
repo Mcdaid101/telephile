@@ -1,14 +1,13 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1 id="category-titles">Documentary Series Reviews</h1>
+<h1 id="category-titles">Series Reviews</h1>
 {% if view %}
-
-<div class="container" style="color: black;">
+<div class="container" style="color: black; width: 90%;">
     <div class="row">
       {% for x in view %}
         <div class="col-md-4">
-            <div class="card">
+            <div class="card" id="category-card">
                 <div class="card-body">
                     <div class="image-container">
                       {% if "placeholder" in x.featured_image.url %}

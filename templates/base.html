@@ -35,7 +35,9 @@
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Review</a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <a class="dropdown-item" href="{% url 'add_post' %}">Add a Review</a>
+              {% if user.is_authenticated %}
               <a class="dropdown-item" href="{% url 'your_reviews' %}">Your Reviews</a>
+              {% endif %}
             </div>
           </li>
           <li class="nav-item dropdown">

@@ -119,7 +119,7 @@ This renders the drama category page with any posts within that category
 """
 def drama(request):
     view = Post.objects.filter(category=1, status=1).values()
-    return render(request, 'drama.html', {'view': view})
+    return render(request, 'categories.html', {'view': view})
 
 
 """
@@ -127,7 +127,7 @@ This renders the sci-fi category page with any posts within that category
 """
 def scifi(request):
     view = Post.objects.filter(category=2, status=1).values()
-    return render(request, 'scifi.html', {'view': view})
+    return render(request, 'categories.html', {'view': view})
 
 
 """
@@ -135,7 +135,7 @@ This renders the fantasy category page with any posts within that category
 """
 def fantasy(request):
     view = Post.objects.filter(category=3, status=1).values()
-    return render(request, 'fantasy.html', {'view': view})
+    return render(request, 'categories.html', {'view': view})
 
 
 """
@@ -143,7 +143,7 @@ This renders the comedy category page with any posts within that category
 """
 def comedy(request):
     view = Post.objects.filter(category=4, status=1).values()
-    return render(request, 'comedy.html', {'view': view})
+    return render(request, 'categories.html', {'view': view})
 
 
 """
@@ -151,7 +151,7 @@ This renders the documentary category page with any posts within that category
 """
 def documentary(request):
     view = Post.objects.filter(category=5, status=1).values()
-    return render(request, 'scifi.html', {'view': view})
+    return render(request, 'categories.html', {'view': view})
 
 
 def yourReviews(request):
