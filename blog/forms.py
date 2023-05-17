@@ -12,11 +12,9 @@ class reviewForm(forms.ModelForm):
 
     class Meta:
         model = Post
-        fields = ('title', 'content', 'featured_image', 'category',)
+        fields = ('title', 'content', 'category',)
         widgets = {
             'title': forms.TextInput(),
-            'content': forms.TextInput(),
+            'content': forms.TextInput(attrs={'style': 'height:400px'}),
             'category': forms.Select(),
             }
-
-

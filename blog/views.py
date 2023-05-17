@@ -6,7 +6,7 @@ from .models import Post, Category
 from .forms import CommentForm, reviewForm
 from django.urls import reverse
 from django.template import loader
-from django.views.generic import CreateView
+from django.views.generic import CreateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.utils.text import slugify
 
@@ -127,7 +127,7 @@ This renders the sci-fi category page with any posts within that category
 """
 def scifi(request):
     view = Post.objects.filter(category__category="Sci-Fi", status=1)
-    return render(request, 'categories.html', {'view': view}), 
+    return render(request, 'categories.html', {'view': view}) 
 
 
 """
@@ -160,3 +160,5 @@ def yourReviews(request):
     user = request.user
     view = Post.objects.filter(author=user, status=1)
     return render(request, 'your_reviews.html', {'view': view})
+
+

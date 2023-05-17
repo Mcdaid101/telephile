@@ -2,8 +2,11 @@
 
 {% block content %}
 {% if view %}
-
-<h1 id="category-titles" style="color: white;">{{ x.category.category }} Reviews</h1>
+{% for x in view %}
+{% if forloop.first %}
+<h1 id="category-titles" style="color: white; margin-top: 20px;">{{ x.category.category }} Reviews</h1>
+{% endif %}
+{% endfor %}
 <div class="container" style="color: black; width: 90%;">
     <div class="row">
       {% for x in view %}
