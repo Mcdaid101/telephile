@@ -5,12 +5,15 @@
 <div id="hero-container">
     <img class="hero-image" src="https://sguru.org/wp-content/uploads/2018/04/tv-series.jpg">
 </div> 
-<div id="home-title">
+
+<div id="welcome-title">
+    <div>
     <h1>Welcome to Telephile</h1>
     <h2>The Internet's best TV series Review site</h2>
     <h3>Check out some of these great reviews</h3>
+    <h3>Or how about <a href="{% url 'account_signup' %}">Signing up</a> and posting one of your own! </h3>
+    </div>
 </div>
-<div>
     
 </div>
 
@@ -38,7 +41,7 @@
                             <p class="author">By: {{ post.author }}</p>
                             <hr/>
                             <p class="card-text text-muted h6">{{ post.created_on}}&nbsp;&nbsp;&nbsp; <i class="far fa-heart"></i>
-                                {{ post.number_of_likes }} &nbsp;&nbsp;&nbsp; <a href="#" style="text-decoration: none;">{{ post.category }}</a></p>
+                                {{ post.number_of_likes }}&nbsp;&nbsp;&nbsp;{{ total_comments }} &nbsp;&nbsp;&nbsp; {{ post.category }}</p>
                         </div>
                     </div>
                 </div>

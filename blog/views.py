@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from django.http import HttpResponse
-from .models import Post
+from .models import Post, Category
 from .forms import CommentForm, reviewForm
 from django.urls import reverse
 from django.template import loader
@@ -118,7 +118,7 @@ def about(request):
 This renders the drama category page with any posts within that category
 """
 def drama(request):
-    view = Post.objects.filter(category=1, status=1).values()
+    view = Post.objects.filter(category__category="Drama", status=1)
     return render(request, 'categories.html', {'view': view})
 
 
@@ -126,15 +126,15 @@ def drama(request):
 This renders the sci-fi category page with any posts within that category
 """
 def scifi(request):
-    view = Post.objects.filter(category=2, status=1).values()
-    return render(request, 'categories.html', {'view': view})
+    view = Post.objects.filter(category__category="Sci-Fi", status=1)
+    return render(request, 'categories.html', {'view': view}), 
 
 
 """
 This renders the fantasy category page with any posts within that category
 """
 def fantasy(request):
-    view = Post.objects.filter(category=3, status=1).values()
+    view = Post.objects.filter(category__category="Fantasy", status=1)
     return render(request, 'categories.html', {'view': view})
 
 
@@ -142,7 +142,7 @@ def fantasy(request):
 This renders the comedy category page with any posts within that category
 """
 def comedy(request):
-    view = Post.objects.filter(category=4, status=1).values()
+    view = Post.objects.filter(category__category="Comedy", status=1)
     return render(request, 'categories.html', {'view': view})
 
 
@@ -150,11 +150,11 @@ def comedy(request):
 This renders the documentary category page with any posts within that category
 """
 def documentary(request):
-    view = Post.objects.filter(category=5, status=1).values()
+    view = Post.objects.filter(category__category="Documentary", status=1)
     return render(request, 'categories.html', {'view': view})
 
 
 def yourReviews(request):
     user = request.user
-    view = Post.objects.filter(author=user, status=1).values()
+    view = Post.objects.filter(author=user, status=1)
     return render(request, 'your_reviews.html', {'view': view})

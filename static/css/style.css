@@ -39,9 +39,17 @@ body {
   max-height: 700px;
 }
 
-#home-title {
-  margin-top: 20px;
+#welcome-title {
+  margin: 0 auto;
+  color: white;
   text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-style: solid;
+  border-radius: 10px;
+  border-width: 5px;
+  border-color: white;
+  font-size: 90%;
 }
 
 
@@ -162,6 +170,11 @@ padding-top: 10px;
 
 
 /* category pages */
+
+#category-titles {
+  text-align: center;
+}
+
 #category-card {
   margin-bottom: 50px; 
   margin-top: 50px;

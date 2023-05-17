@@ -1,8 +1,9 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1 id="category-titles">Series Reviews</h1>
 {% if view %}
+
+<h1 id="category-titles" style="color: white;">{{ x.category.category }} Reviews</h1>
 <div class="container" style="color: black; width: 90%;">
     <div class="row">
       {% for x in view %}
@@ -22,7 +23,7 @@
                     <p class="author">By: {{ x.author }}</p>
                     <hr/>
                     <p class="card-text text-muted h6">{{ x.created_on}}&nbsp;&nbsp;&nbsp; <i class="far fa-heart"></i>
-                        {{ x.number_of_likes }} &nbsp;&nbsp;&nbsp; {{ x.category }}</p>
+                        {{ x.number_of_likes }} &nbsp;&nbsp;&nbsp; {{ total_comments }} &nbsp;&nbsp;&nbsp;{{ x.category.category }}</p>
                     </div>
                 </div>
             </div>
