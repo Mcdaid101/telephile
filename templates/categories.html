@@ -10,7 +10,7 @@
 <div class="container" style="color: black; width: 90%;">
     <div class="row">
       {% for x in view %}
-        <div class="col-md-4">
+        <div class="col-md-4" style="margin-bottom: 20px;">
             <div class="card" id="category-card">
                 <div class="card-body">
                     <div class="image-container">
@@ -26,7 +26,9 @@
                     <p class="author">By: {{ x.author }}</p>
                     <hr/>
                     <p class="card-text text-muted h6">{{ x.created_on}}&nbsp;&nbsp;&nbsp; <i class="far fa-heart"></i>
-                        {{ x.number_of_likes }} &nbsp;&nbsp;&nbsp; {{ total_comments }} &nbsp;&nbsp;&nbsp;{{ x.category.category }}</p>
+                        {{ x.number_of_likes }} &nbsp;&nbsp;&nbsp; {{ total_comments }}</p>
+                      <br>
+                      <p>{{ x.category.category }}</p>
                     </div>
                 </div>
             </div>
@@ -37,7 +39,7 @@
 
   <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
   <script>
-    // Get the button
+    // go to top of page function from w3 schools 
     let mybutton = document.getElementById("myBtn");
     
     // When the user scrolls down 20px from the top of the document, show the button

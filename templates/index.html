@@ -2,23 +2,21 @@
 
 {% block content %}
 
-<div id="hero-container">
+<div id="hero">
     <img class="hero-image" src="https://sguru.org/wp-content/uploads/2018/04/tv-series.jpg">
-</div> 
+  </div> 
 
 
-    <div class="row">
-        <div class="col-1"></div>
-        <div class="col-10" id="welcome-title">
-            <h1>Welcome to Telephile</h1>
-            <h2>The Internet's best TV series Review site</h2>
-            <h3>Check out some of these great reviews <i class="fa-solid fa-down-long"></i></h3>
-            <h3>Or how about <a href="{% url 'account_signup' %}">Signing up</a> and posting one of your own! <i class="fa-solid fa-user-plus"></i></h3></div>
-        <div class="col-1"></div>
-    </div>
+  <div class="row">
+    <div class="col-1"></div>
+    <div class="col-10" id="welcome-title">
+        <h1>Welcome to Telephile</h1>
+        <h2>The Internet's best TV series Review site</h2>
+        <h3>Check out some of these great reviews <i class="fa-solid fa-down-long"></i></h3>
+        <h3>Or how about <a href="{% url 'account_signup' %}">Signing up</a> and posting one of your own! <i class="fa-solid fa-user-plus"></i></h3></div>
+    <div class="col-1"></div>
+</div>
 
-<div class="container-fluid" style="margin-bottom: 200px;">
-    <div class="row">
 
         <!-- Blog Entries Column -->
         <div class="col-12 mt-3 left">
@@ -50,13 +48,12 @@
             <div class="row">
                 {% endif %}
                 {% endfor %}
-
             </div>
         </div>
-    </div>
+    
 
     {% if is_paginated %}
-    <nav aria-label="Page navigation">
+    <nav aria-label="Page navigation" style="margin-bottom: 100px;">
         <ul class="pagination justify-content-center">
             {% if page_obj.has_previous %}
             <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
@@ -68,4 +65,6 @@
         </ul>
     </nav>
     {% endif %}
+
+
 {% endblock %}
