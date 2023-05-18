@@ -48,14 +48,15 @@ body {
 }
 
 #welcome-title {
-  color: white;
+  color: black;
+  background-color: rgb(255, 255, 255);
   text-align: center;
   margin-top: 20px;
   margin-bottom: 20px;
   border-style: solid;
   border-radius: 10px;
   border-width: 5px;
-  border-color: white;
+  border-color: black;
   font-size: 90%;
 }
 
@@ -224,9 +225,24 @@ padding-top: 10px;
 
 /* notifications */
  #notification {
-  color: white;
+  color: black;
+  background-color: white;
   font-size: 150%;
  }
+
+
+ /* light-mode dark-mode */
+.dark-mode {
+  background-color: white;
+  color: black;
+}
+
+.light-mode {
+  background-color: white;
+  color: black;
+}
+
+
 /* media queries */
 
 @media screen and (max-width: 800px){
