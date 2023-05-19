@@ -6,7 +6,7 @@ from .models import Post, Category
 from .forms import CommentForm, reviewForm
 from django.urls import reverse
 from django.template import loader
-from django.views.generic import CreateView, DeleteView
+from django.views.generic import CreateView, DeleteView, UpdateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.utils.text import slugify
 
@@ -160,5 +160,3 @@ def yourReviews(request):
     user = request.user
     view = Post.objects.filter(author=user, status=1)
     return render(request, 'your_reviews.html', {'view': view})
-
-

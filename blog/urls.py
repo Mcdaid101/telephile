@@ -14,4 +14,4 @@ urlpatterns = [
     path('documentary', views.documentary, name='documentary'),
     path('add_post', AddPostView.as_view(), name='add_post'),
     path('yourReviews', views.yourReviews, name='your_reviews'),
-]
+    ]

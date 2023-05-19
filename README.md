@@ -1,11 +1,11 @@
-# Red Hugh's Adventure
+# Telephile
 
-Telephile is an online TV series website where users can create an account and leave reviews for different TV series.
+Telephile is an online TV series website where users can create an account and leave reviews for different TV series. Users can interact with reviews by leaving comments and liking posts and reply to other comments others have commented on their own reviews. 
 
-You can find the live site [Here](https://red-hughs-adventure.herokuapp.com/).
+You can find the live site [Here](https://telephile.herokuapp.com/).
 ####
 
-![Website Mock Up]()
+![Website Mock Up](static/images/all-devices-black.png)
 &nbsp;
 
 # Purpose
@@ -13,91 +13,16 @@ I built this website as my fourth project for the code institutes full stack dev
 I built this website from scratch using the knowledge I gained from the course where I studied the basics of Python, HTML, Javascript and CSS.
 
 # Target audience
-* Tv Lovers 
+* Tv Lovers
+* Writers 
 * Bloggers
 
-## How to 
+# User Experience 
 
-
-## Features 
-
-
-
-<details><summary>Different Areas</summary>
-<p>
-
-![Tunnels](assets/images/tunnels.png)
-
-![watch house](assets/images/watchhouse.png)
-
-![dungeon](assets/images/dungeon.png)
-
-![courtyard](assets/images/courtyard.png)
-</p>
-</details>
 <br>
 
-2.  The player is given multiple choices to explore a different direction in each room / area they venture into. 
+## Site Aims
 
-3. The game accepts user input to add their name, which is referenced throughout and to move direction and tells the player to enter which word to go which direction. 
-<details><summary>Multiple choices for navigation</summary>
-<p>
-
-![courtyard](assets/images/courtyard.png)
-</p>
-</details>
-<br>
-
-4. User input can also determine whether the player wants to undertake a certain task or pick up an object. 
-
-<details><summary>Choice of task</summary>
-<p>
-
-![wardens office](assets/images/wardens_office%20.png)
-</p>
-</details>
-<br>
-
-5. Validation is implemented on every choice the player can make, if a player enters something other than the game requested, they will be met with text that is coloured red to tell them the only options they can enter to proceed. 
-
-<details><summary>Input validation</summary>
-<p>
-
-![courtyard](assets/images/must_enter_name.png)
-</p>
-</details>
-<br>
-
-6. If the player is caught or killed by the guards he will lose, the game will then offer them another chance to play again or to exit the game entirely. 
-
-<details><summary>Game over</summary>
-<p>
-
-![courtyard](assets/images/key_failed.png)
-</p>
-</details>
-<br>
-
-7. The delay print function makes the text print out slowly as if it is just appearing on screen one letter at a time mimicking text adventure games which were popular in the 1980's.
-
-8. The text's green color is also chosen to make the game seem like a terminal adventure game from the past, it gives the game a retro and authentic feel.
-
-9. To differentiate between each room unique ASCII art is loaded on entering giving the game a better design. 
-
-10. A progress bar which simulates a new area rendering is added to the bottom of each area when the player inputs which direction he would like to go. 
-
-<details><summary>Loading area bar</summary>
-<p>
-
-![courtyard](assets/images/tunnels.png)
-</p>
-</details>
-<br>
-
-## Future Features 
-
-* 
-<br>
 
 # Design 
 

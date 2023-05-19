@@ -8,14 +8,6 @@
 <p style="text-decoration: underline;">The Web's best TV series review site.</p>
 </div>
 
-{% if messages %}
-<ul class="messages">
-    {% for message in messages %}
-    <li  {% if message.tags %} class=" {{ message.tags }} " {% endif %}> {{ message }} </li>
-    {% endfor %}
-</ul>
-{% endif %}
-
     <div id="add-post-container">
       {% if user.is_authenticated %}
 
@@ -23,7 +15,7 @@
           <form method="POST" onsubmit="alert('Your review has been submitted for approval by our admins');">
             {% csrf_token %}
             {{form|crispy}}
-            <input type="submit" class="btn btn-dark"></input>
+            <input type="submit" class="btn btn-dark" id="submit-own-post"></input>
           </form>
           {% else %}
           <h2 style="text-align: center;">Sorry you need to <a href="{% url 'account_login' %}">sign in</a> if you want to post a review!</h2>

@@ -239,6 +239,10 @@ padding-top: 10px;
   margin-bottom: 80px;
 }
 
+#submit-own-post {
+  margin-bottom: 50px;
+}
+
 
 /* notifications */
  #notification {
