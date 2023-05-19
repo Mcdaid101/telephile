@@ -23,14 +23,35 @@ I built this website from scratch using the knowledge I gained from the course w
 
 ## Site Aims
 
+* Provide Tv lovers with a forum to post reviews of any Tv series they have watched and interact with other Tv enthusiasts.
+* Allow users to find different Tv series from the different choice of series categories on the site.
+* Allow users to comment on reviews and reply to any on their own.
+* Allow users to like other user's posts.
+* Provide the site admin with the ability to approve and disapprove posts and comments to promote a safe space for users. 
 
 # Design 
 
-![Flow Chart](assets/images/flow_chart%20.png)
-
 <br>
 
-* 
+## Agile Methodology 
+The agile methodology was implemented in the design of this project. The project was planned on github using the project board feature.
+* You can find the project board [Here](https://github.com/users/Mcdaid101/projects/2/views/1).
+* The project board consists of three sections. 1. Todo 2. In progress 3. Done.
+Once a user story was conceived it was placed in the todo section, when in progress the second section and when implemented and complete in the third. 
+<br>
+
+## User stories 
+1. Post reviews. As a user I can post reviews on the site so that I can share my reviews with the site community.
+2. Like functionality. As a user I can like and unlike posts so that I can show I like a post.
+3. Log out. As a site user I can log out of the site so that I do not remain logged in and people do not get access to my account.
+4. Account registration. As a site user I can register for an account so that I can comment and upvote and downvote on posts.
+5. Manage Posts. As a site admin I can create, read, update and delete comments and posts so that I can manage what is viewed on the site.
+6. Approve of comments. As a site admin I can approve of comments before they are posted so that I can make sure they are not inappropriate or abusive.
+7. Create drafts. As a site admin I can create drafts so that I can save my posts and continue writing them later.
+8. View likes. As a site user I can see how many likes a post has so that I can see how popular a post is.
+9. Paginated Posts. As a site user I can view a paginated list of posts so that I can easily select a post to view.
+10. View Posts. As a User I can open up posts so that I can read the article within it and view comments.
+11. Comments on Posts. As a user I can comment so that I can share my opinion on a series and interact with other site users.
 
 <br>
 
