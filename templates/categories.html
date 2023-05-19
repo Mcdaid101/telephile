@@ -4,7 +4,9 @@
 {% if view %}
 {% for x in view %}
 {% if forloop.first %}
-<h1 id="category-titles" style="color: white; margin-top: 20px;">{{ x.category.category }} Reviews</h1>
+<div class="card" id="category-banner">
+<h1 id="category-titles">{{ x.category.category }} Reviews</h1>
+</div>
 {% endif %}
 {% endfor %}
 <div class="container" style="color: black; width: 90%;">

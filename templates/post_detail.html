@@ -69,9 +69,11 @@
       {% else %}
       {% if user.is_authenticated %}
       <div id="leave-a-comment">
-      <h5 style="color: white">Leave a comment:</h5>
-      <p>{{ user.username }}</p>
-      <form method="post">
+      <h5>Leave a comment:</h5>
+      <h5 style="color: white;">Leave a comment:</h5>
+      </div>
+      <h5 style="color: black;">Body:</h5>
+      <form method="post" style="color: white;">
          {{ comment_form | crispy }}
          {% csrf_token %}
          <button id="comment-submit" type="submit" class="btn btn-lg">Submit</button>
