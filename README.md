@@ -460,7 +460,7 @@ web: gunicorn autoclassic.wsgi
 ## Media 
 * Site's posts feature image if unprovided: [here](https://www.pexels.com/photo/retro-tv-set-on-concrete-surface-5721869/)
 * Posts feature image if unprovided: [here](https://images.pexels.com/photos/10599961/pexels-photo-10599961.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)
-* Home page hero image is [here]()
+* Home page hero is from scontent on facebook image is [here](https://scontent-lcy1-1.xx.fbcdn.net/v/t39.30808-6/311134067_416071014039021_806491811075822809_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=e3f864&_nc_ohc=S21fvKd8L4YAX_OWoXn&_nc_ht=scontent-lcy1-1.xx&oh=00_AfA04p9E2-rNTd0Mg8B7RBirtWGhH-zMiavymSuL7Ks3zA&oe=646BFA28)
 
 ## Acknowledgements 
 * I would like to thank my mentor Ronan Mc Clelland for his help and guidance while I built this project.
