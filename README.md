@@ -247,118 +247,66 @@ Lighthouse testing
 ## Manual Testing
 
 ## First time stories 
-* As a first time user: I want to be able <br>
-Testing done to make sure that 
+* As a first time user: I want to be able to post a review on Telephile <br>
+Testing done to make sure that users can post reviews.
 <details><summary>First time user 1</summary>
 <p>
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| | |   | Works as expected |
+| Add your own post| Once signed up and logged in, users can navigate to the add a review page and add a post. The post is successful ifthey receive an alert telling them so | The user receives an alert notifying them that their post is pending  | Works as expected |
 </p>
 </details>
 <br>
 <br>
 
-* As a first time user:   <br>
- Testing done to ensure that 
+* As a first time user: I want to be able to sign up and create an account <br>
+ Testing done to ensure that users can sign up to the website.
 <details><summary>First time user 2</summary>
 <p>
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-|  |  |  | Works as expected |
+| Create an account feature | Users can navigate to the sign up page and create an account  | Once the user signs up their account is created and they can log in and out as they please and make use of the rest of the site's features  | Works as expected |
 </p>
 </details>
 <br>
 <br>
 
-* As a first time user: I want to be able to <br>
-  Testing done to ensure that 
+* As a first time user: I want to be able to leave comments on other's posts <br>
+  Testing done to ensure that users can comment on posts
 <details><summary>First time user 3</summary>
 <p>
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| | |  | Works as expected |
+|Comments | Users can comment underneath other users posts | Comments appear once they are posted and approved by the admin | Works as expected |
 </p>
 </details>
 <br>
 <br>
 
-* As a first time user: I want to be able to  <br>
- Testing done to ensure that 
+* As a first time user: I want to be able to view how many likes and comments are on a post  <br>
+ Testing done to ensure that the amount of likes and comments on a post appear underneath the post
 <details><summary>First time user 4</summary>
 <p>
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-||  |  | Works as expected |
+|Amount of likes and comments | Navigate any posts page and find out how many users commented and liked the post underneath the image beside the author  | The amount of likes and comments appear underneath the post | Works as expected |
 </p>
 </details>
 <br>
 <br>
 
-* As a first time user: I want  <br>
- Testing done to ensure that 
+* As a first time user: I want to see what posts I have made <br>
+ Testing done to ensure that the your reviews section shows the user's reviews.
 <details><summary>First time user 5</summary>
 <p>
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| | |  | Works as expected |
-</p>
-</details>
-<br>
-<br>
-
-* As a first time user: I want <br>
-Testing done to ensure the
-<details><summary>First time user 6</summary>
-<p>
-
-| **Feature** | **Action** | **Expected Result** | **Actual Result** |
-|-------------|------------|---------------------|-------------------|
-| |   |  | Works as expected |
-</p>
-</details>
-<br>
-<br>
-
-* As a first time user: I want to <br>
- Testing done to ensure that 
-<details><summary>First time user 7</summary>
-<p>
-
-| **Feature** | **Action** | **Expected Result** | **Actual Result** |
-|-------------|------------|---------------------|-------------------|
-|  |  |  | Works as expected |
-</p>
-</details>
-<br>
-<br>
-
-*  As a first time user: I want to <br>
- Testing done to ensure that 
-<details><summary>First time user 8</summary>
-<p>
-
-| **Feature** | **Action** | **Expected Result** | **Actual Result** |
-|-------------|------------|---------------------|-------------------|
-|  |  |  | Works as expected |
-</p>
-</details>
-<br>
-<br>
-
-* As a first time user: I want to be able to  <br>
-Testing done to ensure that 
-<details><summary>First time user 9</summary>
-<p>
-
-| **Feature** | **Action** | **Expected Result** | **Actual Result** |
-|-------------|------------|---------------------|-------------------|
-| |  |  | Works as expected |
+| Your reviews section| navigate to the your reviews section to view the posts you have made | Your reviews appear in the your reviews section  | Works as expected |
 </p>
 </details>
 <br>
@@ -366,69 +314,57 @@ Testing done to ensure that
 
 ## Returning stories
 
-* As a returning user: I want to be able to <br>
- Testing done to ensure that 
-<details><summary>Returning User 1</summary>
+* As a returning user: I want to be able to log in without putting my details again <br>
+Testing done to ensure each user can have their details remembered for login. 
+<details><summary>Returning user 1</summary>
 <p>
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-|  |  |  | Works as expected |
+| Remember login details | Navigate to login page and click remmeber details | The user's login details will be remembered for next time | Works as expected |
 </p>
 </details>
 <br>
 <br>
 
-* As a returning user: I want to be able to  <br>
-Testing done to ensure that 
+* As a returning user: I want to be able to like posts I enjoy and have the option of unliking them if I want <br>
+Testing done to ensure that users can like and unlike posts
 <details><summary>Returning user 2</summary>
 <p>
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| |  |   | |
+| Likes | Clicking the heart under a post liked the post and clicking it again unlikes it | The post is liked  | Works as expected |
 </p>
 </details>
 <br>
 <br>
 
 ## Owner stories 
-* As the site owner:  <br>
-Testing done to ensure that 
+* As the site owner: I want to be able to moderate what is posted on the site  <br>
+Testing done to ensure that the admin can approve and disapprove of what is posted on the site
 <details><summary>Site owner 1</summary>
 <p>
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-|  | | | Works as expected |
+| Approve of and disapprove of posts and comments | Admin can approve and disapprove of users posts and comments, they will not get posted until they are approved| Posts and comments do not appear until approved | Works as expected |
 </p>
 </details>
 <br>
 <br>
 
-* As the site owner:   <br>
-Testing done to ensure that 
+* As the site owner: I want to be able to choose the category each post belongs in  <br>
+Testing done to ensure that posts can be placed in a specific category
 <details><summary>Site owner 2</summary>
 <p>
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| |  |   | Works as expected |
+| Categorizing | Admin can choose which category a post belongs to | The category the admin chooses the post to be in, is which one it ends up in the category page  | Works as expected |
 </p>
 </details>
 <br>
-<br>
-
-* As the site owner: I want users to   <br>
-Testing done to ensure 
-<details><summary>Site owner 3</summary>
-<p>
-
-| **Feature** | **Action** | **Expected Result** | **Actual Result** |
-|-------------|------------|---------------------|-------------------|
-|  |  |  | Works as expected |
-</p>
-</details>
 <br>
 
 
