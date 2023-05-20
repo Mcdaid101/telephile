@@ -458,8 +458,9 @@ web: gunicorn autoclassic.wsgi
 * W3schools provided me with the code for my scroll to top of page function and my dark/light mode button. 
 
 ## Media 
-* 
-* 
+* Site's posts feature image if unprovided: [here](https://www.pexels.com/photo/retro-tv-set-on-concrete-surface-5721869/)
+* Posts feature image if unprovided: [here](https://images.pexels.com/photos/10599961/pexels-photo-10599961.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)
+* Home page hero image is [here]()
 
 ## Acknowledgements 
 * I would like to thank my mentor Ronan Mc Clelland for his help and guidance while I built this project.
