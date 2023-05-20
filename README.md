@@ -5,7 +5,7 @@ Telephile is an online TV series website where users can create an account and l
 You can find the live site [Here](https://telephile.herokuapp.com/).
 ####
 
-![Website Mock Up](static/images/all-devices-black.png)
+![Website Mock Up](static/images/all-devices-black%20(1).png)
 &nbsp;
 
 # Purpose
@@ -65,43 +65,92 @@ Each user story was drawn up in the issues section of gihub and passed on to the
 * As a user I can create my own profile, complete with my likes, comments and bio about myself to showcase myself better on the platform. 
 <br>
 
-## Wireframes
+## Wireframes and Schema
 
 <details><summary>Desktop Wireframes</summary>
 <p>
 
-[Home page](static/images/desktop-home.png)
+![Home page](static/images/desktop-home.png)
 
-[About page](static/images/about-desktop.png)
+![About page](static/images/about-desktop.png)
 
-[Register page](static/images/register-desktop.png)
+![Register page](static/images/register-desktop.png)
 
-[Login page](static/images/login-desktop.png)
+![Login page](static/images/login-desktop.png)
 
-[Category page](static/images/CATEGORY-DESKTOP.png)
+![Category page](static/images/CATEGORY-DESKTOP.png)
 
-[Your reviews page](static/images/YOUR-REVIEWS-DESKTOP.png)
+![Your reviews page](static/images/YOUR-REVIEWS-DESKTOP.png)
 
 </p>
 </details>
 
-<details><summary>Mobile Wireframes</summary>
+<details><summary>Mobile and Tablet Wireframes</summary>
 <p>
 
-[Home page](static/images/mobile-home.png)
+![Home page](static/images/mobile-home.png)
 
-[About page](static/images/about-mobile.png)
+![About page](static/images/about-mobile.png)
 
-[Register page](static/images/register-mobile.png)
+![Register page](static/images/register-mobile.png)
 
-[Login page](static/images/login-mobile.png)
+![Login page](static/images/login-mobile.png)
 
-[Category page](static/images/CATEGORY-MOBILE.png)
+![Category page](static/images/CATEGORY-MOBILE.png)
 
-[Your reviews page](static/images/your-reviews-mobile.png)
+![Your reviews page](static/images/your-reviews-mobile.png)
 
 </p>
 </details>
+
+<details><summary>Database Schema</summary>
+<p>
+
+![Database](static/images/DATABASE%20SCHEMA.png)
+
+</p>
+</details>
+
+## Design choices 
+<br>
+
+### Colour scheme
+The colour scheme of Telephile is a simple black and white. These were chosen as they contrast each other well and they helped me implement the light and dark mode where users can choose which colour to view the site in.
+
+### Font 
+The font family for the website is 'roboto, condensed' from google fonts, this was chosen as it is easy to read and perfect for an article along with a blog site in general. 
+
+## Features
+<br>
+
+### Nav bar
+To navigate the site Users use the nav bar at the top of each page. What appears on the nav bar depends on if the user is authenticated or not. (if the user is signed up)
+* Signed out 
+![Nav bar signed out](static/images/nav%20bar.png)
+* Signed in
+![Nav bar signed in](static/images/signedin-nav.png)
+
+### Footer
+Similar to the nav bar the footer appears on each page and has a sticky effect. The footer contains links to the site's social media pages and has a light/dark mode button so users can choose which way to view the site. 
+![Footer](static/images/footer.png)
+
+### Home page 
+The home page is the first page the user will see when visiting the site, it contains the nav bar and footer and a hero image of classic tv series along with a welcome message which tells the user of reviews below they should check out and sign up to create their own. The reviews below are paginated in reviews of 6. 
+![Home](static/images/home-page.png)
+
+### About page 
+The about page contains a card which tells the user about the site and what it's values are. It has a home button at the end of the text to redirect the user to the home page and to entice them to explore further once they have found out what the site is about. 
+![About](static/images/about.png)
+
+### Post a review
+This page is accessed through the nav bar under the "Review" drop down. This page allows the user to post their own review and give it their own title, content and pick which category it belongs in. 
+![Post a review](static/images/post-a-review.png)
+
+### Your reviews
+This page is accessed through the nav bar under the "Review" drop down. This page allows users to view the posts they have posted themselves. This page is only accessible once a user has signed up and is logged in. 
+![Your reviews](static/images/your-reviews.png)
+
+
 
 # Technology Used 
 <br>
@@ -120,7 +169,11 @@ Each user story was drawn up in the issues section of gihub and passed on to the
 * Vs Code IDE in browser
 * Django
 * Techsini Multi Device Mockup Generator used in this readme to display an image of the website on different devices 
-* Heroku
+* Heroku -  Hosts live site 
+* ElephantSQL - HOsts database
+* Bootstrap 4 - Used for site structure and making the site responsive
+* Basimiq - Created wireframes 
+* Cloudinary + Whitenoise - Hosts and displays static files and images for the site
 
 # Bugs 
 
@@ -135,6 +188,8 @@ Each user story was drawn up in the issues section of gihub and passed on to the
 
 # Testing and validation
 
+<br>
+
 I have manually tested this project by doing the following:
 
 * Passed the project through a pep8 linter and confirmed there is no problems.
@@ -142,7 +197,196 @@ I have manually tested this project by doing the following:
 * Tested each user story to make sure each one passes. 
 
 Pep8
-* No errors were returned from Pep8online.com or from extendsclass.com/pythontester. 
+* No errors were returned from Pep8online.com or from extendsclass.com/pythontester.
+
+<br>
+
+## Manual Testing
+
+## First time stories 
+* As a first time user: I want to be able <br>
+Testing done to make sure that 
+<details><summary>First time user 1</summary>
+<p>
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| | |   | Works as expected |
+</p>
+</details>
+<br>
+<br>
+
+* As a first time user:   <br>
+ Testing done to ensure that 
+<details><summary>First time user 2</summary>
+<p>
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+|  |  |  | Works as expected |
+</p>
+</details>
+<br>
+<br>
+
+* As a first time user: I want to be able to <br>
+  Testing done to ensure that 
+<details><summary>First time user 3</summary>
+<p>
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| | |  | Works as expected |
+</p>
+</details>
+<br>
+<br>
+
+* As a first time user: I want to be able to  <br>
+ Testing done to ensure that 
+<details><summary>First time user 4</summary>
+<p>
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+||  |  | Works as expected |
+</p>
+</details>
+<br>
+<br>
+
+* As a first time user: I want  <br>
+ Testing done to ensure that 
+<details><summary>First time user 5</summary>
+<p>
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| | |  | Works as expected |
+</p>
+</details>
+<br>
+<br>
+
+* As a first time user: I want <br>
+Testing done to ensure the
+<details><summary>First time user 6</summary>
+<p>
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| |   |  | Works as expected |
+</p>
+</details>
+<br>
+<br>
+
+* As a first time user: I want to <br>
+ Testing done to ensure that 
+<details><summary>First time user 7</summary>
+<p>
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+|  |  |  | Works as expected |
+</p>
+</details>
+<br>
+<br>
+
+*  As a first time user: I want to <br>
+ Testing done to ensure that 
+<details><summary>First time user 8</summary>
+<p>
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+|  |  |  | Works as expected |
+</p>
+</details>
+<br>
+<br>
+
+* As a first time user: I want to be able to  <br>
+Testing done to ensure that 
+<details><summary>First time user 9</summary>
+<p>
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| |  |  | Works as expected |
+</p>
+</details>
+<br>
+<br>
+
+## Returning stories
+
+* As a returning user: I want to be able to <br>
+ Testing done to ensure that 
+<details><summary>Returning User 1</summary>
+<p>
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+|  |  |  | Works as expected |
+</p>
+</details>
+<br>
+<br>
+
+* As a returning user: I want to be able to  <br>
+Testing done to ensure that 
+<details><summary>Returning user 2</summary>
+<p>
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| |  |   | |
+</p>
+</details>
+<br>
+<br>
+
+## Owner stories 
+* As the site owner:  <br>
+Testing done to ensure that 
+<details><summary>Site owner 1</summary>
+<p>
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+|  | | | Works as expected |
+</p>
+</details>
+<br>
+<br>
+
+* As the site owner:   <br>
+Testing done to ensure that 
+<details><summary>Site owner 2</summary>
+<p>
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| |  |   | Works as expected |
+</p>
+</details>
+<br>
+<br>
+
+* As the site owner: I want users to   <br>
+Testing done to ensure 
+<details><summary>Site owner 3</summary>
+<p>
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+|  |  |  | Works as expected |
+</p>
+</details>
+<br>
 
 
 # Deployment 
