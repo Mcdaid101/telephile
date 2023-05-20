@@ -17,16 +17,16 @@
                 <div class="card-body">
                     <div class="image-container">
                       {% if "placeholder" in x.featured_image.url %}
-                        <img class="card-img-top"
+                        <img class="card-img-top" alt="card series image"
                             src="https://images.pexels.com/photos/10599961/pexels-photo-10599961.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
                       {% else %}
-                        <img class="card-img-top"src=" {{ x.featured_image.url }}">
+                        <img class="card-img-top"src=" alt='card series image' {{ x.featured_image.url }}">
                       {% endif %}
                       <a href="{% url 'post_detail' x.slug %}" style="text-decoration: none;" class="post-link">
                         <h2 class="card-title" id="post-title">{{ x.title }}</h2>
                     </a>
                     <p class="author">By: {{ x.author }}</p>
-                    <hr/>
+                    <hr>
                     <p class="card-text text-muted h6">{{ x.created_on}}&nbsp;&nbsp;&nbsp; <i class="far fa-heart"></i>
                         {{ x.number_of_likes }} &nbsp;&nbsp;&nbsp; {{ total_comments }}</p>
                       <br>

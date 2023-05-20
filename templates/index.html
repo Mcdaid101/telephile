@@ -3,7 +3,7 @@
 {% block content %}
 
 <div id="hero">
-    <img class="hero-image" src="https://scontent-lcy1-1.xx.fbcdn.net/v/t39.30808-6/311134067_416071014039021_806491811075822809_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=e3f864&_nc_ohc=S21fvKd8L4YAX_OWoXn&_nc_ht=scontent-lcy1-1.xx&oh=00_AfA04p9E2-rNTd0Mg8B7RBirtWGhH-zMiavymSuL7Ks3zA&oe=646BFA28">
+    <img class="hero-image" alt="hero image" src="https://scontent-lcy1-1.xx.fbcdn.net/v/t39.30808-6/311134067_416071014039021_806491811075822809_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=e3f864&_nc_ohc=S21fvKd8L4YAX_OWoXn&_nc_ht=scontent-lcy1-1.xx&oh=00_AfA04p9E2-rNTd0Mg8B7RBirtWGhH-zMiavymSuL7Ks3zA&oe=646BFA28">
   </div> 
 
 
@@ -27,17 +27,17 @@
                         <div class="card-body">
                             <div class="image-container">
                                 {% if "placeholder" in post.featured_image.url %}
-                                <img class="card-img-top"
+                                <img class="card-img-top" alt="card series image"
                                     src="https://images.pexels.com/photos/5197107/pexels-photo-5197107.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
                                 {% else %}
-                                <img class="card-img-top" src=" {{ post.featured_image.url }}">
+                                <img class="card-img-top" alt="card series image" src=" {{ post.featured_image.url }}">
                                 {% endif %}
                             </div>
                             <a href="{% url 'post_detail' post.slug %}" style="text-decoration: none;" class="post-link">
                                 <h2 class="card-title" id="post-title">{{ post.title }}</h2>
                             </a>
                             <p class="author">By: {{ post.author }}</p>
-                            <hr/>
+                            <hr>
                             <p class="card-text text-muted h6">{{ post.created_on}}&nbsp;&nbsp;&nbsp; <i class="far fa-heart"></i>
                                 {{ post.number_of_likes }}&nbsp;&nbsp;&nbsp;{{ total_comments }} &nbsp;&nbsp;&nbsp; {{ post.category }}</p>
                         </div>

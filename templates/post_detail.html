@@ -10,9 +10,9 @@
    <!--Image-->
    <div id="image" class="col-12 d-flex justify-content-center">
       {% if "placeholder" in post.featured_image.url %}
-      <img class="card-img-top" src="https://images.pexels.com/photos/5197107/pexels-photo-5197107.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+      <img class="card-img-top" alt="card series image" src="https://images.pexels.com/photos/5197107/pexels-photo-5197107.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
       {% else %}
-      <img class="card-img-top" src=" {{ post.featured_image.url }}">
+      <img class="card-img-top" alt="card series image" src=" {{ post.featured_image.url }}">
       {% endif %}
       <!--Author, created on, likes, comments, category-->
    </div>
