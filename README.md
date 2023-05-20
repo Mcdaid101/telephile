@@ -36,34 +36,50 @@ I built this website from scratch using the knowledge I gained from the course w
 ## Agile Methodology 
 The agile methodology was implemented in the design of this project. The project was planned on github using the project board feature.
 * You can find the project board [Here](https://github.com/users/Mcdaid101/projects/2/views/1).
-* The project board consists of three sections. 1. Todo 2. In progress 3. Done.
-Once a user story was conceived it was placed in the todo section, when in progress the second section and when implemented and complete in the third. 
+* The project board consists of three sections: 
+* 1. Todo 
+* 2. In progress 
+* 3. Done.
+Each user story was drawn up in the issues section of gihub and passed on to the kanban where once  added to the project board it was placed in the todo section, when in progress the second section and when implemented and complete in the third. 
 <br>
 
-## User stories 
-1. Post reviews. As a user I can post reviews on the site so that I can share my reviews with the site community.
-2. Like functionality. As a user I can like and unlike posts so that I can show I like a post.
-3. Log out. As a site user I can log out of the site so that I do not remain logged in and people do not get access to my account.
-4. Account registration. As a site user I can register for an account so that I can comment and upvote and downvote on posts.
-5. Manage Posts. As a site admin I can create, read, update and delete comments and posts so that I can manage what is viewed on the site.
-6. Approve of comments. As a site admin I can approve of comments before they are posted so that I can make sure they are not inappropriate or abusive.
-7. Create drafts. As a site admin I can create drafts so that I can save my posts and continue writing them later.
-8. View likes. As a site user I can see how many likes a post has so that I can see how popular a post is.
-9. Paginated Posts. As a site user I can view a paginated list of posts so that I can easily select a post to view.
-10. View Posts. As a User I can open up posts so that I can read the article within it and view comments.
-11. Comments on Posts. As a user I can comment so that I can share my opinion on a series and interact with other site users.
+## User stories
+### First iteration
+* 1. Manage Posts. As a site admin I can create, read, update and delete comments and posts so that I can manage what is viewed on the site.
+* 2. Create drafts. As a site admin I can create drafts so that I can save my posts and continue writing them later.
+* 3. Approve of comments. As a site admin I can approve of comments before they are posted so that I can make sure they are not inappropriate or abusive.
+### Second iteration
+* 1. Post reviews. As a user I can post reviews on the site so that I can share my reviews with the site community.
+* 2. View Posts. As a User I can open up posts so that I can read the article within it and view comments.
+* 3. Paginated Posts. As a site user I can view a paginated list of posts so that I can easily select a post to view.
+* 4. Account registration. As a site user I can register for an account so that I can comment and upvote and downvote on posts.
+* 5. Log out. As a site user I can log out of the site so that I do not remain logged in and people do not get access to my account.
+### Third iteration
+* 1. Like functionality. As a user I can like and unlike posts so that I can show I like a post.
+* 2. View likes. As a site user I can see how many likes a post has so that I can see how popular a post is.
+* 3. Comments on Posts. As a user I can comment so that I can share my opinion on a series and interact with other site users.
 
+### Future features 
+* As a user be able to save reviews and access your own section of saved reviews so that you can keep track of ones you like. 
+* As a user be able to upload your own images on your review post to show pictures of the series you are reviewing.
+* As a user I can create my own profile, complete with my likes, comments and bio about myself to showcase myself better on the platform. 
 <br>
 
-## Issues with design
+## Wireframes
 
-* 
-<br>
+<details><summary>Desktop Wireframes</summary>
+<p>
+![Home page](static/images/desktop-home.png)
 
-* 
-<br>
+</p>
+</details>
 
-* 
+<details><summary>Mobile Wireframes</summary>
+<p>
+![Home page](static/images/mobile-home.png)
+
+</p>
+</details>
 
 # Technology Used 
 <br>
@@ -93,193 +109,6 @@ Once a user story was conceived it was placed in the todo section, when in progr
 <br>
 
 * No bugs remained after this. 
-<br>
-
-# User stories
-
-## First time stories 
-* As a first time user: I want to be able <br>
-Testing done to make sure that 
-<details><summary>First time user 1</summary>
-<p>
-
-| **Feature** | **Action** | **Expected Result** | **Actual Result** |
-|-------------|------------|---------------------|-------------------|
-| | |   | Works as expected |
-</p>
-</details>
-<br>
-<br>
-
-* As a first time user:   <br>
- Testing done to ensure that 
-<details><summary>First time user 2</summary>
-<p>
-
-| **Feature** | **Action** | **Expected Result** | **Actual Result** |
-|-------------|------------|---------------------|-------------------|
-|  |  |  | Works as expected |
-</p>
-</details>
-<br>
-<br>
-
-* As a first time user: I want to be able to <br>
-  Testing done to ensure that 
-<details><summary>First time user 3</summary>
-<p>
-
-| **Feature** | **Action** | **Expected Result** | **Actual Result** |
-|-------------|------------|---------------------|-------------------|
-| | |  | Works as expected |
-</p>
-</details>
-<br>
-<br>
-
-* As a first time user: I want to be able to  <br>
- Testing done to ensure that 
-<details><summary>First time user 4</summary>
-<p>
-
-| **Feature** | **Action** | **Expected Result** | **Actual Result** |
-|-------------|------------|---------------------|-------------------|
-||  |  | Works as expected |
-</p>
-</details>
-<br>
-<br>
-
-* As a first time user: I want  <br>
- Testing done to ensure that 
-<details><summary>First time user 5</summary>
-<p>
-
-| **Feature** | **Action** | **Expected Result** | **Actual Result** |
-|-------------|------------|---------------------|-------------------|
-| | |  | Works as expected |
-</p>
-</details>
-<br>
-<br>
-
-* As a first time user: I want <br>
-Testing done to ensure the
-<details><summary>First time user 6</summary>
-<p>
-
-| **Feature** | **Action** | **Expected Result** | **Actual Result** |
-|-------------|------------|---------------------|-------------------|
-| |   |  | Works as expected |
-</p>
-</details>
-<br>
-<br>
-
-* As a first time user: I want to <br>
- Testing done to ensure that 
-<details><summary>First time user 7</summary>
-<p>
-
-| **Feature** | **Action** | **Expected Result** | **Actual Result** |
-|-------------|------------|---------------------|-------------------|
-|  |  |  | Works as expected |
-</p>
-</details>
-<br>
-<br>
-
-*  As a first time user: I want to <br>
- Testing done to ensure that 
-<details><summary>First time user 8</summary>
-<p>
-
-| **Feature** | **Action** | **Expected Result** | **Actual Result** |
-|-------------|------------|---------------------|-------------------|
-|  |  |  | Works as expected |
-</p>
-</details>
-<br>
-<br>
-
-* As a first time user: I want to be able to  <br>
-Testing done to ensure that 
-<details><summary>First time user 9</summary>
-<p>
-
-| **Feature** | **Action** | **Expected Result** | **Actual Result** |
-|-------------|------------|---------------------|-------------------|
-| |  |  | Works as expected |
-</p>
-</details>
-<br>
-<br>
-
-## Returning stories
-
-* As a returning user: I want to be able to <br>
- Testing done to ensure that 
-<details><summary>Returning User 1</summary>
-<p>
-
-| **Feature** | **Action** | **Expected Result** | **Actual Result** |
-|-------------|------------|---------------------|-------------------|
-|  |  |  | Works as expected |
-</p>
-</details>
-<br>
-<br>
-
-* As a returning user: I want to be able to  <br>
-Testing done to ensure that 
-<details><summary>Returning user 2</summary>
-<p>
-
-| **Feature** | **Action** | **Expected Result** | **Actual Result** |
-|-------------|------------|---------------------|-------------------|
-| |  |   | |
-</p>
-</details>
-<br>
-<br>
-
-## Owner stories 
-* As the site owner:  <br>
-Testing done to ensure that 
-<details><summary>Site owner 1</summary>
-<p>
-
-| **Feature** | **Action** | **Expected Result** | **Actual Result** |
-|-------------|------------|---------------------|-------------------|
-|  | | | Works as expected |
-</p>
-</details>
-<br>
-<br>
-
-* As the site owner:   <br>
-Testing done to ensure that 
-<details><summary>Site owner 2</summary>
-<p>
-
-| **Feature** | **Action** | **Expected Result** | **Actual Result** |
-|-------------|------------|---------------------|-------------------|
-| |  |   | Works as expected |
-</p>
-</details>
-<br>
-<br>
-
-* As the site owner: I want users to   <br>
-Testing done to ensure 
-<details><summary>Site owner 3</summary>
-<p>
-
-| **Feature** | **Action** | **Expected Result** | **Actual Result** |
-|-------------|------------|---------------------|-------------------|
-|  |  |  | Works as expected |
-</p>
-</details>
 <br>
 
 # Testing and validation
