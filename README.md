@@ -31,8 +31,6 @@ I built this website from scratch using the knowledge I gained from the course w
 
 # Design 
 
-<br>
-
 ## Agile Methodology 
 The agile methodology was implemented in the design of this project. The project was planned on github using the project board feature.
 * You can find the project board [Here](https://github.com/users/Mcdaid101/projects/2/views/1).
@@ -40,7 +38,7 @@ The agile methodology was implemented in the design of this project. The project
 * 1. Todo 
 * 2. In progress 
 * 3. Done.
-Each user story was drawn up in the issues section of gihub and passed on to the kanban where once  added to the project board it was placed in the todo section, when in progress the second section and when implemented and complete in the third. 
+* Each user story was drawn up in the issues section of gihub and passed on to the kanban where once  added to the project board it was placed in the todo section, when in progress the second section and when implemented and complete in the third. 
 <br>
 
 ## User stories
@@ -192,7 +190,7 @@ Users have the ability to like and unlike posts. The feature is found underneath
 * HTML
 * CSS 
 * Javascript
-* Django framework
+
 <br>
 
 ## Tools and Frameworks
@@ -200,6 +198,7 @@ Users have the ability to like and unlike posts. The feature is found underneath
 * Github 
 * Vs Code IDE in browser
 * Django
+* Postgres
 * Techsini Multi Device Mockup Generator used in this readme to display an image of the website on different devices 
 * Heroku -  Hosts live site
 * Allauth - login and registration
@@ -210,11 +209,13 @@ Users have the ability to like and unlike posts. The feature is found underneath
 
 # Bugs 
 
-* 
+* Was really struggling to make the user's review that were posted to be accessible in the post detail form. Using the form.cleaned_data[] method in "form.instance.slug = slugify(form.cleaned_data['title'])" in my add post view helped with this and fixed the bug. 
 <br>
 
-* 
+* When doing lighthouse testing my site was scoring very low, took me a while to realize some of the chrome add on's I was using such as adblocker were impacting it's performance. Switching to an incognito tab quickly got the score up and made testing the page easier. 
 <br>
+
+* When I deployed the site, none of my css or images were loading correctly. Installing whitespace fixed this. 
 
 * No bugs remained after this. 
 <br>
@@ -225,21 +226,21 @@ Users have the ability to like and unlike posts. The feature is found underneath
 
 I have manually tested this project by doing the following:
 * Passed the pages through the W3C HTML and CSS validators
-* Passed the project through a pep8 linter and confirmed there is no problems.
+* Passed the project through a pep8 linter and the Code Institute python checker and confirmed there is no problems.
 * Tested in my gitpod terminal and the Heroku terminal.
 * Tested each user story to make sure each one passes. 
 
 W3C validations
-* [HTML](static/images/HTML%20VALIDATION.png)
-* [CSS](static/images/CSS%20validation.png)
+![HTML](static/images/HTML%20VALIDATION.png)
+![CSS](static/images/CSS%20validation.png)
 
 Pep8
 * No errors were returned from the code institute's python Linter or from extendsclass.com/pythontester.
-* [Python](static/images/Screenshot%202023-05-20%20165605.png)
+![Python](static/images/Screenshot%202023-05-20%20165605.png)
 
 Lighthouse testing
 * At first my test results came up quite poor but after switching to an incognito window on chrome and downsizing the main hero image on the home page the site got a high score as seen in the images below. All pages got a similar result.
-* ![Test](static/images/lighthouse%20testing%20home.png)
+ ![Test](static/images/lighthouse%20testing%20home.png)
 
 <br>
 
@@ -447,22 +448,78 @@ I used the following commands throughout this project:
 * python3 manage.py migrate - This migrated my changes to my databases
 
 ## Heroku
- This website is deployed on the Code Institute's mock terminal on Heroku
+ This website is deployed on Heroku
 
-### Steps for deployment 
+## Steps for deployment 
 * Fork or clone this repository
-* Created a new heroku app through build app
-* Set the buildpacks to Python and NodeJs in that specific order
 * Linked the heroku app to the repository via github
 * Clicked automatic deploys so each git push would automatically go to the heroku app
-* This was ideal for testing so I could see what the game looked like on the Heroku terminal with each git push
+* This was ideal for testing so I could see what the site looked like on the Heroku terminal with each git push
 
-# Credits 
+<p> 1. Create Django project and app </p>
 
-## Code 
-* 
-* 
-* 
+* Install django using the command pip3 install 'django<4' gunicorn
+* Then install the database libraries dj_database_url and psycopg2, using pip3 install dj_database_url psycopg2
+* Install Cloudinary library to host any images using pip3 install dj3-cloudinary-storage
+* Then create the requirements.txt file using the command pip3 freeze --local > requirements.txt
+* Then created my Django project with the command django-admin startproject project_name .
+* I created the Django app with the command python3 manage.py startapp app_name
+* I used the commands python3 manage.py makemigrations and python3 manage.py migrate to migrate my changes.
+* To test and run the project I used python3 manage.py runserver.
+
+<p> 2. Create Heroku app </p>
+
+* I opened the heroku website and logged into my account
+* I created a new app with the project name
+* Select region as Europe
+* Open the Resources section and select Heroku Postgres
+* Open the Settings section and select Config VARS, then add the keys needed to start development DATABASE_URL/SECRET_KEY/CLOUDINARY_URL, with Config VARS you add: PORT: 8000 + DISABLE_COLLECTSTATIC: 1;
+
+<p> 3. Set up Django settings.py and necessary folders/files </p>
+
+* Set up to connect the environment variables
+         from pathlib import Path
+         import os
+         import dj_database_url
+         from django.contrib.messages import constants as messages
+         if os.path.isfile('env.py'):
+         import env
+         
+* Inside INSTALLED_APPS I added the necessary apps
+
+* For the database I replaced it with the following code
+
+        DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+        }
+        
+* For the static files I replaced it with the following code to conect to Cloudinary
+
+      STATIC_URL = '/static/'
+      STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+      STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+      STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+      MEDIA_URL = '/media/'
+      DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+      
+* Create a Procfile and add the following text
+
+web: gunicorn autoclassic.wsgi
+
+<h3> 4. Final deployment. </h3>
+
+* In settings.py set the DEBUG = False;
+* In Heroku I went back to Settings > Config VARS and removed the DISABLE_COLLECTSTATIC var;
+* In Heroku I navigated to the Deploy section;
+* I clicked to connect to GitHub and searched for my repository for this project;
+* I clicked on manual deploy to build the App;
+* When finished, I clicked the View button, which redirected me to the live site.
+
+<br> 
+
+# Credits
+* W3schools provided me with the code for my scroll to top of page function and my dark/light mode button. 
 
 ## Media 
 * 
