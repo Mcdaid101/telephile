@@ -224,13 +224,22 @@ Users have the ability to like and unlike posts. The feature is found underneath
 <br>
 
 I have manually tested this project by doing the following:
-
+* Passed the pages through the W3C HTML and CSS validators
 * Passed the project through a pep8 linter and confirmed there is no problems.
 * Tested in my gitpod terminal and the Heroku terminal.
 * Tested each user story to make sure each one passes. 
 
+W3C validations
+* [HTML](static/images/HTML%20VALIDATION.png)
+* [CSS](static/images/CSS%20validation.png)
+
 Pep8
-* No errors were returned from Pep8online.com or from extendsclass.com/pythontester.
+* No errors were returned from the code institute's python Linter or from extendsclass.com/pythontester.
+* [Python](static/images/Screenshot%202023-05-20%20165605.png)
+
+Lighthouse testing
+* At first my test results came up quite poor but after switching to an incognito window on chrome and downsizing the main hero image on the home page the site got a high score as seen in the images below. All pages got a similar result.
+* ![Test](static/images/lighthouse%20testing%20home.png)
 
 <br>
 

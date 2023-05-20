@@ -18,13 +18,13 @@ class PostList(generic.ListView):
     paginate_by = 6
 
 
-"""
-Allows user to post their own review
-"""
 class AddPostView(CreateView, LoginRequiredMixin):
+    """
+    Allows user to post their own review
+    """
     form_class = reviewForm
     template_name = 'add_post.html'
-    
+
     def get_success_url(self):
         return reverse('add_post')
 
@@ -35,10 +35,10 @@ class AddPostView(CreateView, LoginRequiredMixin):
         return super().form_valid(form)
 
 
-"""
-Post details, view once posts are clicked on to read more
-"""
 class PostDetail(View):
+    """
+    Post details, view once posts are clicked on to read more
+    """
 
     def get(self, request, slug, *args, **kwargs):
         queryset = Post.objects.filter(status=1)
@@ -47,7 +47,7 @@ class PostDetail(View):
         liked = False
         if post.likes.filter(id=self.request.user.id).exists():
             liked = True
-      
+
         return render(
             request,
             "post_detail.html",
@@ -59,7 +59,6 @@ class PostDetail(View):
                 "comment_form": CommentForm()
             },
         )
-
 
     def post(self, request, slug, *args, **kwargs):
         queryset = Post.objects.filter(status=1)
@@ -92,11 +91,11 @@ class PostDetail(View):
             },
         )
 
-"""
-View which gives the ability for users to like and unlike posts
-"""
+
 class PostLike(View):
-    
+    """
+    View which gives the ability for users to like and unlike posts
+    """
     def post(self, request, slug, *args, **kwargs):
         post = get_object_or_404(Post, slug=slug)
         if post.likes.filter(id=request.user.id).exists():
@@ -107,56 +106,58 @@ class PostLike(View):
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
 
-"""
-Renders the about page
-"""
 def about(request):
+    """
+    Renders the about page
+    """
     return render(request, 'about.html')
 
 
-"""
-This renders the drama category page with any posts within that category
-"""
 def drama(request):
+    """
+    This renders the drama category page with any posts within that category
+    """
     view = Post.objects.filter(category__category="Drama", status=1)
     return render(request, 'categories.html', {'view': view})
 
 
-"""
-This renders the sci-fi category page with any posts within that category
-"""
 def scifi(request):
+    """
+    This renders the sci-fi category page with any posts within that category
+    """
     view = Post.objects.filter(category__category="Sci-Fi", status=1)
-    return render(request, 'categories.html', {'view': view}) 
+    return render(request, 'categories.html', {'view': view})
 
 
-"""
-This renders the fantasy category page with any posts within that category
-"""
 def fantasy(request):
+    """
+    This renders the fantasy category page with any posts within that category
+    """
     view = Post.objects.filter(category__category="Fantasy", status=1)
     return render(request, 'categories.html', {'view': view})
 
 
-"""
-This renders the comedy category page with any posts within that category
-"""
 def comedy(request):
+    """
+    This renders the comedy category page with any posts within that category
+    """
     view = Post.objects.filter(category__category="Comedy", status=1)
     return render(request, 'categories.html', {'view': view})
 
 
-"""
-This renders the documentary category page with any posts within that category
-"""
 def documentary(request):
+    """
+    This renders the documentary category page with any posts
+    within that category
+    """
     view = Post.objects.filter(category__category="Documentary", status=1)
     return render(request, 'categories.html', {'view': view})
 
-"""
-This renders the users own reviews
-"""
+
 def yourReviews(request):
+    """
+    This renders the users own reviews
+    """
     user = request.user
     view = Post.objects.filter(author=user, status=1)
     return render(request, 'your_reviews.html', {'view': view})
