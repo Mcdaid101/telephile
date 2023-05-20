@@ -143,12 +143,44 @@ The about page contains a card which tells the user about the site and what it's
 ![About](static/images/about.png)
 
 ### Post a review
-This page is accessed through the nav bar under the "Review" drop down. This page allows the user to post their own review and give it their own title, content and pick which category it belongs in. 
+This page is accessed through the nav bar under the "Review" drop down. This page allows the user to post their own review and give it their own title, content and pick which category it belongs in. Once the user has successfully posted a review they will be notified with an alert
+* If user is logged in and authenticated 
 ![Post a review](static/images/post-a-review.png)
+* If user is not logged in and not authenticated
+![Post a review](static/images/no%20access%20add%20review.png)
 
 ### Your reviews
 This page is accessed through the nav bar under the "Review" drop down. This page allows users to view the posts they have posted themselves. This page is only accessible once a user has signed up and is logged in. 
 ![Your reviews](static/images/your-reviews.png)
+
+### Categories
+This page contains the articles which are listed under each category type. Drama, Sci-Fi, Fantasy, Comedy and Documentary. The user clicks on the dropdown on the nav bar to choose which category they would like to see. The category page has a scroll to top button at the bottom of each page to bring users back up to the top quickly. 
+![Categories](static/images/Categories.png)
+
+### Sign up 
+The sign up page contains a form for users to sign up for the site. Requiring them to create a username and password. 
+![Sign up](/static/images/sign%20up.png)
+
+### Log in
+The log in page contains a login form for users to log in to. This requires their username and password they created when they signed up. Once a user logs in they are redirected to the home page and a notifiction will appearing notifying them that they have logged in. 
+![Log in](static/images/sign%20in.png)
+
+
+### Log out
+The log out page contains a card which asks are the user sure they want to log out and the option to log out. Once a user logs in they are redirected to the home page and a notifiction will appearing notifying them that they have logged out. 
+![Log out](static/images/sign%20ojut.png)
+
+### Post detail
+The post detail page is accessed by clicking on the cards of each post within the home page, categories or your reviews page. This page contains the posts content title and likes and comments. Users can read the posts content section and check out likes and comments and who wrote the article. 
+![Post detail](static/images/post%20detail.png)
+
+### Comments
+The users have the ability to comment on posts when they are logged in and authenticated. The option to comment will not be available until they are signed up and logged in. Once a user has commented they will be notified their comment has been submitted for approval by the admin team. 
+![comments](static/images/comments.png)
+
+### Likes
+Users have the ability to like and unlike posts. The feature is found underneath the content section of each posts and is in the form of a love heart.
+![Post detail](static/images/post%20detail.png)
 
 
 
@@ -169,7 +201,8 @@ This page is accessed through the nav bar under the "Review" drop down. This pag
 * Vs Code IDE in browser
 * Django
 * Techsini Multi Device Mockup Generator used in this readme to display an image of the website on different devices 
-* Heroku -  Hosts live site 
+* Heroku -  Hosts live site
+* Allauth - login and registration
 * ElephantSQL - HOsts database
 * Bootstrap 4 - Used for site structure and making the site responsive
 * Basimiq - Created wireframes 
