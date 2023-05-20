@@ -69,14 +69,36 @@ Each user story was drawn up in the issues section of gihub and passed on to the
 
 <details><summary>Desktop Wireframes</summary>
 <p>
-![Home page](static/images/desktop-home.png)
+
+[Home page](static/images/desktop-home.png)
+
+[About page](static/images/about-desktop.png)
+
+[Register page](static/images/register-desktop.png)
+
+[Login page](static/images/login-desktop.png)
+
+[Category page](static/images/CATEGORY-DESKTOP.png)
+
+[Your reviews page](static/images/YOUR-REVIEWS-DESKTOP.png)
 
 </p>
 </details>
 
 <details><summary>Mobile Wireframes</summary>
 <p>
-![Home page](static/images/mobile-home.png)
+
+[Home page](static/images/mobile-home.png)
+
+[About page](static/images/about-mobile.png)
+
+[Register page](static/images/register-mobile.png)
+
+[Login page](static/images/login-mobile.png)
+
+[Category page](static/images/CATEGORY-MOBILE.png)
+
+[Your reviews page](static/images/your-reviews-mobile.png)
 
 </p>
 </details>
