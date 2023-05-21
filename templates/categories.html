@@ -23,7 +23,7 @@
                         <img class="card-img-top"src=" alt='card series image' {{ x.featured_image.url }}">
                       {% endif %}
                       <a href="{% url 'post_detail' x.slug %}" style="text-decoration: none;" class="post-link">
-                        <h2 class="card-title" id="post-title">{{ x.title }}</h2>
+                        <h2 class="card-title">{{ x.title }}</h2>
                     </a>
                     <p class="author">By: {{ x.author }}</p>
                     <hr>
