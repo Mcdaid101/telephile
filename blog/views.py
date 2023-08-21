@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from django.http import HttpResponse
@@ -9,6 +9,7 @@ from django.template import loader
 from django.views.generic import CreateView, DeleteView, UpdateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.utils.text import slugify
+from django.contrib import messages
 
 
 class PostList(generic.ListView):
@@ -33,6 +34,21 @@ class AddPostView(CreateView, LoginRequiredMixin):
         form.instance.slug = slugify(form.cleaned_data['title'])
 
         return super().form_valid(form)
+
+
+def DeletePost(request, post_id):
+    """
+    delete your post
+    """
+    post = Post.objects.get(pk=post_id)
+    context = {'post': post}
+
+    if request.method == 'POST':
+        post.delete()
+        messages.success(request, f'You have delete your review successfully')
+        return redirect('your_reviews')
+
+    return render(request, 'delete_post.html', context)
 
 
 class PostDetail(View):
@@ -161,3 +177,6 @@ def yourReviews(request):
     user = request.user
     view = Post.objects.filter(author=user, status=1)
     return render(request, 'your_reviews.html', {'view': view})
+
+
+

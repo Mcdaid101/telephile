@@ -40,6 +40,9 @@
        <!-- The number of likes goes before the closing strong tag -->
        <span class="text-secondary">{{ post.number_of_likes }} </span>
        </strong>
+       {% if user.is_authenticated %}
+       <button><a href="{% url 'delete_post' post.id %}">Delete Post</a></button>
+       {% endif %}
    </div>
    <!--Article Content-->
    <div id="Article" class="col-12">
