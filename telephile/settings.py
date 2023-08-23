@@ -28,7 +28,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['telephile.herokuapp.com', 'localhost', '8000-mcdaid101-telephile-x0g7ti76wsg.ws-eu104.gitpod.io']
 
