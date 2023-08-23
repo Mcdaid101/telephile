@@ -41,7 +41,8 @@
        <span class="text-secondary">{{ post.number_of_likes }} </span>
        </strong>
        {% if user.is_authenticated %}
-       <button><a href="{% url 'delete_post' post.id %}">Delete Post</a></button>
+       <button id="comment-submit" class="btn"><a href="{% url 'delete_post' post.id %}">Delete Post</a></button>
+       <button id="comment-submit" class="btn"><a href="{% url 'edit_post' post.id %}">Edit Post</a></button>
        {% endif %}
    </div>
    <!--Article Content-->

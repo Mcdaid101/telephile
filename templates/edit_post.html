@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% load crispy_forms_tags %}
+
+<div id="home-title">
+<h1>Welcome to Telephile</h1>
+<p style="text-decoration: underline;">The Web's best TV series review site.</p>
+</div>
+
+    <div id="add-post-container">
+      {% if user.is_authenticated %}
+
+      <h1 class="card-title">Edit your Review</h1>
+          <form method="POST" action="{% url 'edit_post' post.id %}" class="form" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{form|crispy}}
+            <input type="submit" class="btn btn-dark" id="submit-own-post"></input>
+          </form>
+          {% else %}
+          <h2 style="text-align: center;">Sorry you need to <a href="{% url 'account_login' %}">sign in</a></h2>
+    </div>
+
+{% endif %}
+{%endblock%}

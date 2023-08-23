@@ -14,5 +14,6 @@ urlpatterns = [
     path('documentary', views.documentary, name='documentary'),
     path('add_post', AddPostView.as_view(), name='add_post'),
     path('delete_post/<post_id>', views.DeletePost, name='delete_post'),
+    path('edit_post/<post_id>', views.EditPost, name='edit_post'),
     path('yourReviews', views.yourReviews, name='your_reviews'),
     ]

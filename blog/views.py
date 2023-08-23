@@ -45,10 +45,34 @@ def DeletePost(request, post_id):
 
     if request.method == 'POST':
         post.delete()
-        messages.success(request, f'You have delete your review successfully')
+        messages.success(request, f'You have deleted your review successfully')
         return redirect('your_reviews')
 
     return render(request, 'delete_post.html', context)
+
+
+def EditPost(request, post_id):
+    """
+    edit your post
+    """
+    post = get_object_or_404(Post, pk=post_id)
+    if request.method == 'POST':
+        form = reviewForm(request.POST, request.FILES, instance=post)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Successfully edited review")
+            return redirect(reverse('post_detail', args=[post.slug]))
+        else:
+            messages.error(request, f'Failed to edit your review')
+    else:
+        form = reviewForm(instance=post)
+
+    template = 'edit_post.html'
+    context = {
+        'form': form,
+        'post': post,
+    }
+    return render(request, template, context)
 
 
 class PostDetail(View):
