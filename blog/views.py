@@ -10,6 +10,21 @@ from django.views.generic import CreateView, DeleteView, UpdateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.utils.text import slugify
 from django.contrib import messages
+from django.contrib.auth.decorators import user_passes_test, login_required
+from functools import wraps
+
+
+def user_is_post_author(view_func):
+    @wraps(view_func)
+    def wrapper(request, post_id, *args, **kwargs):
+        post = get_object_or_404(Post, id=post_id)
+
+        if request.user == post.author:
+            return view_func(request, post_id, *args, **kwargs)
+        else:
+            return redirect('home')  
+
+    return wrapper
 
 
 class PostList(generic.ListView):
@@ -36,6 +51,7 @@ class AddPostView(CreateView, LoginRequiredMixin):
         return super().form_valid(form)
 
 
+@user_is_post_author
 def DeletePost(request, post_id):
     """
     delete your post
@@ -51,9 +67,10 @@ def DeletePost(request, post_id):
     return render(request, 'delete_post.html', context)
 
 
+@user_is_post_author
 def EditPost(request, post_id):
     """
-    edit your post
+    edit a post
     """
     post = get_object_or_404(Post, pk=post_id)
     if request.method == 'POST':
@@ -201,6 +218,3 @@ def yourReviews(request):
     user = request.user
     view = Post.objects.filter(author=user, status=1)
     return render(request, 'your_reviews.html', {'view': view})
-
-
-
